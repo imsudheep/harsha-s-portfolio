@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshavardhan | Short-Form Video Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="notion-light-theme">
+    <!-- SVG Definitions for Mac Folder -->
+    <svg style="display: none;">
+        <defs>
+            <linearGradient id="folderBack" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#73bdf6" />
+                <stop offset="100%" stop-color="#499aeb" />
+            </linearGradient>
+            <linearGradient id="folderFront" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#8fd2ff" />
+                <stop offset="100%" stop-color="#5eb3fb" />
+            </linearGradient>
+            <filter id="folderShadow" x="-10%" y="-10%" width="120%" height="120%">
+                <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#005a9e" flood-opacity="0.2" />
+            </filter>
+            <g id="mac-folder">
+                <path
+                    d="M 5,10 C 2,10 0,12 0,15 L 0,75 C 0,78 2,80 5,80 L 95,80 C 98,80 100,78 100,75 L 100,25 C 100,22 98,20 95,20 L 45,20 L 35,10 Z"
+                    fill="url(#folderBack)" />
+                <rect x="10" y="18" width="80" height="40" fill="#f8f9fa" rx="2" />
+                <path
+                    d="M 0,30 C 0,28 2,26 5,26 L 95,26 C 98,26 100,28 100,30 L 100,75 C 100,78 98,80 95,80 L 5,80 C 2,80 0,78 0,75 Z"
+                    fill="url(#folderFront)" filter="url(#folderShadow)" />
+            </g>
+        </defs>
+    </svg>
+
+    <div class="notion-app-inner">
+        <header class="notion-cover-wrapper">
+            <img class="notion-page-cover"
+                src="https://oxidized-fascinator-611.notion.site/image/attachment%3A38375fa1-a445-414e-8b6c-16f72bdbd1d5%3A__(1).jpeg?table=block&id=312215c5-7e2a-80d2-a921-c49f2177d293&spaceId=e29d7fa8-d9aa-4ced-8783-414c65d67365&width=2000&userId=&cache=v2"
+                alt="Cover Image">
+        </header>
+
+        <main class="notion-page">
+
+            <h1 class="notion-title">Harshavardhan | Short-Form Video Editor</h1>
+
+            <div class="notion-page-content">
+                <h2 class="notion-h2">Hi, I’m Harshavardhan</h2>
+                <div class="notion-text">I help founders, educators, and personal brands turn their ideas into
+                    clean, engaging short-form content through structured, precision-driven editing.</div>
+
+                <h2 class="notion-h2">Software I use</h2>
+                <ul class="notion-bulleted-list">
+                    <li class="notion-list-item">
+                        <span class="notion-list-bullet">•</span>
+                        <div class="notion-list-text"><strong>DaVinci Resolve</strong>-professional editing
+                            environment offering full control over structure, pacing, color, and sound.</div>
+                    </li>
+                </ul>
+
+                <h2 class="notion-h2">What i do</h2>
+                <ol class="notion-numbered-list">
+                    <li class="notion-list-item">
+                        <span class="notion-list-number">1.</span>
+                        <div class="notion-list-text">Hook restructuring</div>
+                    </li>
+                    <li class="notion-list-item">
+                        <span class="notion-list-number">2.</span>
+                        <div class="notion-list-text">Precision pacing</div>
+                    </li>
+                    <li class="notion-list-item">
+                        <span class="notion-list-number">3.</span>
+                        <div class="notion-list-text">Clean subtitle styling</div>
+                    </li>
+                    <li class="notion-list-item">
+                        <span class="notion-list-number">4.</span>
+                        <div class="notion-list-text">Contextual B-roll integration</div>
+                    </li>
+                    <li class="notion-list-item">
+                        <span class="notion-list-number">5.</span>
+                        <div class="notion-list-text">Retention-focused editing</div>
+                    </li>
+                </ol>
+
+                <h2 class="notion-h2">The Portfolio</h2>
+                <div class="portfolio-grid" id="portfolio-grid">
+
+                    <!-- Folder Triggers -->
+                    <div class="mac-folder-trigger" data-target="project1">
+                        <div class="css-mac-folder">
+                            <div class="css-mac-folder-tab"></div>
+                        </div>
+                        <span class="mac-folder-trigger-text">Fitness Brand Promo</span>
+                    </div>
+
+                    <div class="mac-folder-trigger" data-target="project2">
+                        <div class="css-mac-folder">
+                            <div class="css-mac-folder-tab"></div>
+                        </div>
+                        <span class="mac-folder-trigger-text">Tech Startup Explainer</span>
+                    </div>
+
+                    <div class="mac-folder-trigger" data-target="project3">
+                        <div class="css-mac-folder">
+                            <div class="css-mac-folder-tab"></div>
+                        </div>
+                        <span class="mac-folder-trigger-text">Educational Short</span>
+                    </div>
+
+                    <!-- Project 1 Window -->
+                    <div class="mac-window" id="project1">
+                        <div class="mac-titlebar">
+                            <div class="mac-dots">
+                                <span class="mac-dot red close-btn"></span>
+                                <span class="mac-dot yellow"></span>
+                                <span class="mac-dot green"></span>
+                            </div>
+                            <div class="mac-title">Fitness Brand Promo</div>
+                        </div>
+                        <div class="mac-body">
+                            <a href="#" class="mac-file">
+                                <div class="mac-file-icon">🎞️</div>
+                                <span class="mac-file-text">Raw Footage</span>
+                            </a>
+                            <a href="#" class="mac-file">
+                                <div class="mac-file-icon">✨</div>
+                                <span class="mac-file-text">Edited Video</span>
+                            </a>
+                            <a href="#" class="mac-file">
+                                <div class="mac-file-icon">📝</div>
+                                <span class="mac-file-text">Editing Insights</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 Window -->
+                    <div class="mac-window" id="project2">
+                        <div class="mac-titlebar">
+                            <div class="mac-dots">
+                                <span class="mac-dot red close-btn"></span>
+                                <span class="mac-dot yellow"></span>
+                                <span class="mac-dot green"></span>
+                            </div>
+                            <div class="mac-title">Tech Startup Explainer</div>
+                        </div>
+                        <div class="mac-body">
+                            <a href="#" class="mac-file">
+                                <div class="mac-file-icon">🎞️</div>
+                                <span class="mac-file-text">Raw Footage</span>
+                            </a>
+                            <a href="#" class="mac-file">
+                                <div class="mac-file-icon">✨</div>
+                                <span class="mac-file-text">Edited Video</span>
+                            </a>
+                            <a href="#" class="mac-file">
+                                <div class="mac-file-icon">📝</div>
+                                <span class="mac-file-text">Editing Insights</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 Window -->
+                    <div class="mac-window" id="project3">
+                        <div class="mac-titlebar">
+                            <div class="mac-dots">
+                                <span class="mac-dot red close-btn"></span>
+                                <span class="mac-dot yellow"></span>
+                                <span class="mac-dot green"></span>
+                            </div>
+                            <div class="mac-title">Educational Short</div>
+                        </div>
+                        <div class="mac-body">
+                            <a href="#" class="mac-file">
+                                <div class="mac-file-icon">🎞️</div>
+                                <span class="mac-file-text">Raw Footage</span>
+                            </a>
+                            <a href="#" class="mac-file">
+                                <div class="mac-file-icon">✨</div>
+                                <span class="mac-file-text">Edited Video</span>
+                            </a>
+                            <a href="#" class="mac-file">
+                                <div class="mac-file-icon">📝</div>
+                                <span class="mac-file-text">Editing Insights</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="notion-h2">About me</h2>
+                <div class="notion-text">I focus on structured short-form editing that improves clarity and
+                    attention. My goal is to help creators stay focused on their ideas while I handle the editing
+                    side with precision and consistency.</div>
+
+                <h2 class="notion-h2">If This Feels Right</h2>
+                <div class="notion-text">If you feel this editing style fits your content and direction, feel free
+                    to reach out. I’d be happy to discuss and see how we can improve your short-form content
+                    together.</div>
+
+                <ul class="notion-bulleted-list">
+                    <li class="notion-list-item">
+                        <span class="notion-list-bullet">•</span>
+                        <div class="notion-list-text">Instagram: <a href="https://instagram.com/harshavardh_an"
+                                target="_blank" class="notion-link">@harshavardh_an</a></div>
+                    </li>
+                    <li class="notion-list-item">
+                        <span class="notion-list-bullet">•</span>
+                        <div class="notion-list-text">Email: <a href="mailto:murugeshharshawardhan@gmail.com"
+                                class="notion-link">murugeshharshawardhan@gmail.com</a></div>
+                    </li>
+                </ul>
+
+                <h2 class="notion-h2" style="margin-top: 2em; margin-bottom: 2em;">If not, I truly wish you the best
+                    in growing your platform and building your ideas. Keep creating.</h2>
+
+                <div class="profile-section">
+                    <img class="profile-image"
+                        src="https://oxidized-fascinator-611.notion.site/image/attachment%3Ac3b71d04-aaed-4d57-af67-0bc74f46f6d9%3A9833be69-fdc4-49d4-8570-c56bb647e0e4.png?table=block&id=312215c5-7e2a-8052-9006-dbf74f567379&spaceId=e29d7fa8-d9aa-4ced-8783-414c65d67365&width=540&userId=&cache=v2"
+                        alt="Profile Image">
+                    <div class="profile-caption">
+                        <span class="profile-name">Harshavardhan | <span class="profile-title">Short-Form Video
+                                Editor</span></span><br>
+                        <span class="profile-tagline">Structured edits. Reliable outcomes.</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const triggers = document.querySelectorAll('.mac-folder-trigger');
+            const windows = document.querySelectorAll('.mac-window');
+            const closeBtns = document.querySelectorAll('.close-btn');
+
+            function closeAllWindows() {
+                windows.forEach(win => win.classList.remove('open'));
+                triggers.forEach(trig => trig.classList.remove('active'));
+            }
+
+            // Click on folder to open window
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', (e) => {
+                    const targetId = trigger.getAttribute('data-target');
+                    const targetWindow = document.getElementById(targetId);
+
+                    // If already open, close it (toggle behavior)
+                    if (targetWindow.classList.contains('open')) {
+                        closeAllWindows();
+                        return;
+                    }
+
+                    closeAllWindows(); // Close previously opened windows
+                    trigger.classList.add('active'); // highlight folder
+                    targetWindow.classList.add('open'); // open window
+                });
+            });
+
+            // Click red dot to close
+            closeBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    closeAllWindows();
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -588,7 +588,7 @@ a.notion-link:hover {
     margin-bottom: 24px;
     display: flex;
     flex-direction: column;
-    gap: 8px; /* Reduced from 12px for tighter alignment */
+    gap: 24px; /* Doubled gap for breathing room */
 }
 
 .profile-section .profile-image {
@@ -625,7 +625,7 @@ a.notion-link:hover {
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    margin: -4px 0 40px 0; /* Slight negative margin to offset text line-height above */
+    margin: -4px 0 40px 0; /* Compensation for text line-height */
     flex-wrap: wrap;
 }
 

@@ -588,7 +588,7 @@ a.notion-link:hover {
     margin-bottom: 24px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px; /* Reduced from 12px for tighter alignment */
 }
 
 .profile-section .profile-image {
@@ -625,7 +625,7 @@ a.notion-link:hover {
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    margin: 16px 0 40px 0;
+    margin: -4px 0 40px 0; /* Slight negative margin to offset text line-height above */
     flex-wrap: wrap;
 }
 
@@ -693,10 +693,6 @@ a.notion-link:hover {
     .notion-list-text {
         word-break: break-all;
         /* Prevents long emails from shifting layout */
-    }
-
-    .tool-logos {
-        margin-top: 40px;
     }
 }
 

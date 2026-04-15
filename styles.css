@@ -597,6 +597,9 @@ a.notion-link:hover {
     /* restrict width so it isn't massive on desktop */
     border-radius: 4px;
     object-fit: cover;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 .profile-caption {
@@ -719,18 +722,32 @@ a.notion-link:hover {
 
 .popup-content {
     position: relative;
-    width: 90%;
-    max-width: 800px;
+    width: auto;
+    max-width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Specific styling for portrait videos */
+.video-popup.is-portrait .popup-content {
+    max-width: 400px; /* Force a mobile-like width */
 }
 
 #popup-video {
     width: 100%;
+    max-height: 80vh; /* Ensure video fits within screen height */
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     background: #000;
+}
+
+.video-popup.is-portrait #popup-video {
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 20px; /* More rounded like a phone */
 }
 
 .close-video {

@@ -111,7 +111,7 @@
                                 <span class="mac-file-text">Raw Footage</span>
                             </a>
                             <a href="#" class="mac-file video-link" data-video="videos/project2.mp4"
-                                data-next="videos/project1.mp4">
+                                data-next="videos/project1.mp4" data-aspect="portrait">
                                 <div class="mac-file-icon">✨</div>
                                 <span class="mac-file-text">Edited Video</span>
                             </a>
@@ -190,7 +190,7 @@
             <div class="profile-section">
                 <img class="profile-image"
                     src="https://oxidized-fascinator-611.notion.site/image/attachment%3Ac3b71d04-aaed-4d57-af67-0bc74f46f6d9%3A9833be69-fdc4-49d4-8570-c56bb647e0e4.png?table=block&id=312215c5-7e2a-8052-9006-dbf74f567379&spaceId=e29d7fa8-d9aa-4ced-8783-414c65d67365&width=540&userId=&cache=v2"
-                    alt="Profile Image">
+                    alt="Profile Image" draggable="false">
                 <div class="profile-caption">
                     <span class="profile-name">Harshavardhan | <span class="profile-title">Short-Form Video
                             Editor</span></span><br>
@@ -203,11 +203,11 @@
                     <div class="tool-logo" title="Blender">
                         <img src="assets/blender-icon.svg" alt="Blender">
                     </div>
-                    <div class="tool-logo" title="Cursor">
-                        <img src="assets/cursor-ai-code-icon.svg" alt="Cursor">
+                    <div class="tool-logo" title="Antigravity">
+                        <img src="assets/antigravity.jpg" alt="Anti Gravity">
                     </div>
-                    <div class="tool-logo" title="Gemini">
-                        <img src="assets/google-gemini-icon.svg" alt="Gemini">
+                    <div class="tool-logo" title="Remotion">
+                        <img src="assets/remotion.png" alt="Remotion">
                     </div>
                     <div class="tool-logo" title="Claude">
                         <img src="assets/claude-ai-icon.svg" alt="Claude">
@@ -277,10 +277,19 @@
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
                     const videoSrc = link.getAttribute('data-video');
+                    const aspect = link.getAttribute('data-aspect');
                     currentNextVideoSrc = link.getAttribute('data-next');
 
                     if (videoSrc) {
                         popupVideo.src = videoSrc;
+                        
+                        // Handle portrait aspect ratio
+                        if (aspect === 'portrait') {
+                            videoPopup.classList.add('is-portrait');
+                        } else {
+                            videoPopup.classList.remove('is-portrait');
+                        }
+
                         videoPopup.classList.add('show');
                         // Video autoplay is handled by the attribute on the tag, but we can programmatically play just in case
                         popupVideo.play().catch(e => console.log('Autoplay blocked:', e));
@@ -290,6 +299,7 @@
 
             function closePopup() {
                 videoPopup.classList.remove('show');
+                videoPopup.classList.remove('is-portrait');
                 popupVideo.pause();
                 popupVideo.src = '';
             }
@@ -311,6 +321,14 @@
                     currentNextVideoSrc = temp;
                 }
             });
+
+            // Prevent right-click on profile image for security
+            const profileImage = document.querySelector('.profile-image');
+            if (profileImage) {
+                profileImage.addEventListener('contextmenu', (e) => {
+                    e.preventDefault();
+                });
+            }
         });
     </script>
 </body>

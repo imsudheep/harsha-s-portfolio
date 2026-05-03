@@ -1,0 +1,945 @@
+/* styles.css */
+/* Premium Spacious Typography - Apple Inspired */
+:root {
+    --notion-bg: #ffffff;
+    --notion-text: #1d1d1f;
+    /* Apple dark gray */
+    --notion-gray: #86868b;
+    --notion-light-gray: rgba(0, 0, 0, 0.08);
+    --notion-light-bg: #f5f5f7;
+    --notion-select: rgba(0, 125, 250, 0.2);
+    --notion-border: rgba(0, 0, 0, 0.1);
+    --notion-font: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    background: var(--notion-select);
+}
+
+html,
+body {
+    background-color: #ffffff !important;
+}
+
+body.notion-light-theme {
+    font-family: var(--notion-font);
+    color: var(--notion-text);
+    background-color: #ffffff;
+    line-height: 1.8;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent scrolling when popup is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Page Layout */
+.notion-app-inner {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.notion-cover-wrapper {
+    width: 100%;
+    height: 35vh;
+    /* Slightly taller for more breathing room */
+    overflow: hidden;
+    position: relative;
+    background: #f5f5f7;
+}
+
+.notion-page-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 50%;
+    display: block;
+}
+
+.notion-page {
+    width: 100%;
+    max-width: 740px;
+    /* Optimal reading width for maximum elegance */
+    margin: 0 auto;
+    padding: 0 40px 25vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .notion-page {
+        padding: 0 24px 20vh;
+    }
+
+    .notion-title {
+        font-size: 42px !important;
+        margin-top: 80px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .notion-h2 {
+        font-size: 26px !important;
+        margin-top: 48px !important;
+        margin-bottom: 16px !important;
+    }
+}
+
+.notion-icon-container {
+    height: 0;
+    width: 100%;
+    display: block;
+}
+
+.notion-icon {
+    width: 140px;
+    /* Slightly larger icon */
+    height: 140px;
+    border-radius: 50%;
+    /* Apple style circular profile pic */
+    position: relative;
+    top: -70px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    /* Soft elegant shadow */
+    border: 4px solid #fff;
+    object-fit: contain;
+}
+
+/* Typography elements */
+.notion-title {
+    font-size: 52px;
+    font-weight: 600;
+    /* Semi-bold for main title */
+    line-height: 1.15;
+    margin-top: 100px;
+    letter-spacing: -0.04em;
+    color: #1d1d1f;
+}
+
+.notion-subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+}
+
+.notion-h1 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    margin-top: 80px;
+    letter-spacing: -0.03em;
+}
+
+.notion-h2 {
+    font-size: 30px;
+    font-weight: 500;
+    /* Medium for headings */
+    line-height: 1.3;
+    margin-bottom: 24px;
+    margin-top: 96px;
+    /* Massive breathing room between sections */
+    letter-spacing: -0.02em;
+    color: #1d1d1f;
+}
+
+.notion-h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 16px;
+    margin-top: 60px;
+    letter-spacing: -0.01em;
+}
+
+.notion-text {
+    padding: 0;
+    min-height: 28px;
+    word-break: break-word;
+    white-space: normal;
+    /* Fixed awkward spaces on new lines from indentation */
+    margin: 32px 16px 0 0;
+    font-weight: 600;
+    /* Extra bold weight for maximum legibility */
+    color: #424245;
+    /* Soft, readable gray text */
+    letter-spacing: 0.01em;
+}
+
+.notion-text.gray {
+    color: var(--notion-gray);
+}
+
+.notion-text.bold {
+    font-weight: 500;
+    color: #1d1d1f;
+}
+
+.notion-text.italic {
+    font-style: italic;
+}
+
+a.notion-link {
+    color: #0066cc;
+    /* Subtle premium blue */
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+    font-weight: 400;
+}
+
+a.notion-link:hover {
+    border-bottom-color: #0066cc;
+    opacity: 0.8;
+}
+
+/* Lists */
+.notion-bulleted-list,
+.notion-numbered-list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin: 16px 0 40px 0;
+    /* Extra spacious margins below lists */
+}
+
+.notion-list-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    /* Airy padding for list items */
+}
+
+.notion-list-bullet,
+.notion-list-number {
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #86868b;
+    font-weight: 400;
+}
+
+.notion-list-text {
+    flex: 1;
+    min-height: 24px;
+    padding: 0;
+    font-weight: 600;
+    color: #424245;
+    letter-spacing: 0.01em;
+}
+
+.notion-list-text strong {
+    font-weight: 500;
+    color: #1d1d1f;
+}
+
+.notion-list-explanation {
+    font-size: 16px;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+/* Bookmark block */
+.notion-bookmark {
+    margin: 56px 0;
+    /* Breathable spacing */
+    width: 100%;
+    max-width: 100%;
+    border-radius: 16px;
+    /* Smoother corner like iOS */
+    border: 1px solid var(--notion-border);
+    transition: all 0.3s ease;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.notion-bookmark:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    /* Float effect */
+}
+
+.notion-bookmark-link {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    padding: 28px;
+    /* High padding */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.notion-bookmark-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    overflow: hidden;
+}
+
+.notion-bookmark-title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 20px;
+    margin-bottom: 8px;
+    color: #1d1d1f;
+}
+
+.notion-bookmark-description {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    opacity: 0.8;
+    height: auto;
+    max-height: 48px;
+    overflow: hidden;
+    color: #424245;
+}
+
+.notion-bookmark-url {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    color: #86868b;
+}
+
+.notion-bookmark-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    border-radius: 4px;
+}
+
+/* Portfolio Grid & Interactive Folders */
+.portfolio-grid {
+    display: flex;
+    justify-content: flex-start;
+    gap: 32px;
+    margin: 24px 0 56px 0;
+    position: relative;
+    flex-wrap: wrap;
+    /* allow wrapping if many */
+}
+
+/* Original Folder Icon (What you click) */
+.mac-folder-trigger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 8px;
+    padding: 10px 4px;
+    transition: background 0.1s;
+}
+
+.mac-folder-trigger:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.mac-folder-trigger.active {
+    background: rgba(0, 0, 0, 0.08);
+    /* Selection state */
+}
+
+/* Realistic CSS Mac Folder */
+.css-mac-folder {
+    position: relative;
+    width: 80px;
+    height: 60px;
+    margin-bottom: 8px;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mac-folder-trigger:hover .css-mac-folder {
+    transform: scale(1.08);
+    /* pop effect */
+}
+
+/* Back flap (tab) */
+.css-mac-folder::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 55px;
+    background: linear-gradient(to bottom, #7fc1f9, #54a5f4);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+/* The tab bump on top */
+.css-mac-folder-tab {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    width: 32px;
+    height: 10px;
+    background: #7fc1f9;
+    border-radius: 4px 4px 0 0;
+    /* Soften the right edge of the tab to blend */
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Front flap */
+.css-mac-folder::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 48px;
+    background: linear-gradient(180deg, #91caff 0%, #4497e8 100%);
+    border-radius: 4px;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    /* Creates the slight 3D perspective fold */
+    transform-origin: bottom;
+    transform: perspective(300px) rotateX(2deg);
+}
+
+.mac-folder-trigger-text {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1d1d1f;
+    text-align: center;
+    line-height: 1.2;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.mac-folder-trigger.active .mac-folder-trigger-text {
+    background: #0066cc;
+    color: white;
+}
+
+/* Finder Window (Hidden by default, opens inline below folders) */
+.mac-window {
+    display: none;
+    /* JS toggles this */
+    width: 100%;
+    margin-top: 16px;
+    background: rgba(255, 255, 255, 0.85);
+    /* macOS Glass */
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transform-origin: top center;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mac-window.open {
+    display: block;
+}
+
+@keyframes macOpen {
+    from {
+        opacity: 0;
+        transform: scale(0.96) translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Mac Titlebar */
+.mac-titlebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    background: linear-gradient(to bottom, #f3f3f3, #e5e5e5);
+    border-bottom: 1px solid #d1d1d1;
+    position: relative;
+    cursor: default;
+}
+
+.mac-titlebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.mac-dots {
+    position: absolute;
+    left: 14px;
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.mac-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.mac-dot.red {
+    background: #ff5f56;
+    border: 1px solid #e0443e;
+    cursor: pointer;
+}
+
+.mac-dot.red:hover {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2)
+}
+
+/* slight hover effect for close */
+.mac-dot.yellow {
+    background: #ffbd2e;
+    border: 1px solid #dea123;
+}
+
+.mac-dot.green {
+    background: #27c93f;
+    border: 1px solid #1aab29;
+}
+
+.mac-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #4d4d4d;
+    letter-spacing: 0.2px;
+}
+
+/* Finder Body (Where files live) */
+.mac-body {
+    display: flex;
+    padding: 32px 24px;
+    gap: 32px;
+    background: rgba(255, 255, 255, 0.4);
+    min-height: 180px;
+}
+
+.mac-file {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 12px 8px;
+    border-radius: 8px;
+    transition: background 0.15s;
+    width: 90px;
+    /* fixed width for neatness */
+}
+
+.mac-file:hover {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+/* Custom File Icons styling - we use emoji in HTML to act as system icons */
+.mac-file-icon {
+    font-size: 48px;
+    line-height: 1;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: transform 0.2s ease;
+}
+
+.mac-file:hover .mac-file-icon {
+    transform: scale(1.05);
+}
+
+.mac-file-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: #1d1d1f;
+    text-align: center;
+    line-height: 1.2;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.mac-file:hover .mac-file-text {
+    background: #0066cc;
+    color: white;
+}
+
+/* Profile Section at Bottom */
+.profile-section {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    /* Doubled gap for breathing room */
+}
+
+.profile-section .profile-image {
+    width: 100%;
+    max-width: 400px;
+    /* restrict width so it isn't massive on desktop */
+    border-radius: 33px;
+    object-fit: cover;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+    pointer-events: none;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.profile-caption {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #37352f;
+}
+
+.profile-name {
+    font-weight: 600;
+}
+
+.profile-title {
+    font-style: italic;
+    color: rgba(55, 53, 47, 0.65);
+}
+
+.profile-tagline {
+    font-style: italic;
+    color: rgba(55, 53, 47, 0.65);
+}
+
+/* Tool Logos */
+.tool-logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: -4px 0 40px 0;
+    /* Compensation for text line-height */
+    flex-wrap: wrap;
+}
+
+.tool-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tool-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Mobile Responsiveness for Portfolio & General Layout */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .mac-window {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mac-body {
+        padding: 24px 16px;
+        gap: 16px;
+        flex-wrap: wrap;
+        /* Allow files to wrap cleanly on tiny screens */
+        justify-content: center;
+    }
+
+    .mac-file {
+        width: 80px;
+        /* Slightly smaller files on mobile */
+    }
+
+    .mac-file-icon {
+        font-size: 36px;
+    }
+
+    .mac-title {
+        font-size: 11px;
+    }
+
+    .mac-dots {
+        left: 8px;
+        gap: 6px;
+    }
+
+
+    .mac-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Fix Contact/List alignment on mobile */
+    .notion-list-item {
+        align-items: flex-start;
+        /* Ensure bullet and text align top */
+    }
+
+    .notion-list-text {
+        word-break: break-all;
+        /* Prevents long emails from shifting layout */
+    }
+}
+
+/* Video Popup */
+.video-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-popup.show {
+    display: flex;
+    opacity: 1;
+}
+
+.popup-content {
+    position: relative;
+    width: auto;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Specific styling for portrait videos */
+.video-popup.is-portrait .popup-content {
+    max-width: 400px;
+    /* Force a mobile-like width */
+}
+
+#popup-video {
+    width: 100%;
+    max-height: 80vh;
+    /* Ensure video fits within screen height */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    background: #000;
+}
+
+.video-popup.is-portrait #popup-video {
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border-radius: 20px;
+    /* More rounded like a phone */
+}
+
+.close-video {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    line-height: 1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 10001;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.close-video:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    color: #ff5f56;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .close-video {
+        top: 15px;
+        right: 15px;
+        width: 44px;
+        height: 44px;
+        font-size: 24px;
+    }
+
+    .popup-content {
+        max-width: 95%;
+        padding-top: 60px;
+        /* Space for the floating close button */
+    }
+
+    #popup-video {
+        max-height: 70vh;
+    }
+}
+
+.next-video-btn {
+    margin-top: 20px;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.next-video-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+}
+
+/* Text Popup */
+.text-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 10000;
+    /* Above video-popup */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.text-popup.show {
+    display: flex;
+    opacity: 1;
+}
+
+.text-popup-content {
+    width: 90%;
+    max-width: 600px;
+}
+
+.text-popup-content .mac-window {
+    display: block;
+    /* Force visible in popup */
+    background: #ffffff;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.text-body {
+    padding: 40px;
+    max-height: 60vh;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #424245;
+    white-space: pre-wrap;
+    /* Preserve line breaks from txt file */
+}
+
+/* Notion Accordion Styles */
+.notion-accordion {
+    margin: 16px 0 40px 0;
+    width: 100%;
+}
+
+.notion-accordion-item {
+    border-top: 1px solid var(--notion-border);
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.notion-accordion-item:last-child {
+    border-bottom: 1px solid var(--notion-border);
+}
+
+.notion-accordion-header {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    gap: 8px;
+}
+
+.notion-accordion-item:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.accordion-icon {
+    margin-left: auto;
+    font-size: 14px;
+    color: var(--notion-gray);
+    transition: transform 0.3s ease;
+}
+
+.notion-accordion-body {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.notion-accordion-content {
+    padding: 0 0 20px 40px;
+    font-size: 16px;
+    color: #424245;
+    font-weight: 400;
+}
+
+.notion-accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+}
+
+.notion-accordion-item.active {
+    background-color: rgba(0, 0, 0, 0.01);
+}

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65" fill="none">
+  <defs>
+    <!-- Spotlight/radial background gradient matching the official macOS DaVinci Resolve icon -->
+    <radialGradient id="bgGrad" cx="50%" cy="30%" r="80%" fx="50%" fy="10%">
+      <stop offset="0%" stop-color="#1c2c3e" />
+      <stop offset="100%" stop-color="#0b111a" />
+    </radialGradient>
+
+    <!-- Super-fine, high-accuracy rainbow border gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="35%" stop-color="#7eff3b" />
+      <stop offset="70%" stop-color="#ffb000" />
+      <stop offset="100%" stop-color="#ff0055" />
+    </linearGradient>
+
+    <!-- Soft 3D drop shadow for the color petals -->
+    <filter id="petalShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1.2" stdDeviation="1.2" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+
+    <!-- Official color petal radial gradients with bright glossy highlights -->
+    <radialGradient
+       id="radialGradient1680"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.058469,0.08930151,-0.16507404,1.9565823,2.7884105,-28.123773)"
+       cx="32.135498"
+       cy="28.274265"
+       fx="32.135498"
+       fy="28.274265"
+       r="7.0000019">
+      <stop style="stop-color:#ffffff;stop-opacity:1" offset="0" />
+      <stop style="stop-color:#009bd8;stop-opacity:1" offset="1" />
+    </radialGradient>
+
+    <radialGradient
+       id="radialGradient2517"
+       cx="34.077766"
+       cy="33.654915"
+       fx="34.077766"
+       fy="33.654915"
+       r="8.0000048"
+       gradientTransform="matrix(1.9033696,0.76036676,-0.40632236,1.0171167,-17.110072,-25.819532)"
+       gradientUnits="userSpaceOnUse">
+      <stop style="stop-color:#ffffff;stop-opacity:1" offset="0" />
+      <stop style="stop-color:#ff3044;stop-opacity:1" offset="1" />
+    </radialGradient>
+
+    <radialGradient
+       id="radialGradient2852"
+       cx="29.661343"
+       cy="35.66066"
+       fx="29.661343"
+       fy="35.66066"
+       r="8.0000048"
+       gradientTransform="matrix(-1.7236439,1.148614,-0.5221049,-0.78348595,99.579489,27.599128)"
+       gradientUnits="userSpaceOnUse">
+      <stop style="stop-color:#ffffff;stop-opacity:1" offset="0" />
+      <stop style="stop-color:#fcff7c;stop-opacity:1" offset="1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Outer Dark Border for Bevel Effect -->
+  <rect x="2" y="2" width="61" height="61" rx="14.5" fill="none" stroke="#070a0f" stroke-width="1.2" />
+
+  <!-- Background Squircle with Subtle Rainbow Inner Edge -->
+  <rect x="2.6" y="2.6" width="59.8" height="59.8" rx="14" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="0.8" />
+
+  <!-- Petals Group with official curves & translations -->
+  <g transform="translate(-0.0232537,-44.297248)">
+    <g transform="matrix(1.0324977,0,0,1.0324977,-1.0437923,44.339431)">
+      
+      <!-- Top Petal (Blue) -->
+      <path
+         style="fill:url(#radialGradient1680);"
+         filter="url(#petalShadow)"
+         d="m 25.002653,20.382103 c -0.0196,0.514484 0.0718,1.076908 0.223374,1.639464 0.28878,1.070354 0.76738,2.051108 1.331754,2.977508 1.28567,2.106696 2.906202,3.910326 4.664468,5.584894 0.144,0.13766 0.315414,0.253896 0.498968,0.342532 0.18382,0.0956 0.367372,0.0956 0.557324,0.0136 0.18356,-0.08194 0.347788,-0.19858 0.485652,-0.350044 0.610196,-0.63085 1.213344,-1.262652 1.790902,-1.914668 0.813336,-0.9264 1.587896,-1.879432 2.28987,-2.901844 0.63683,-0.926264 1.20721,-1.900738 1.62667,-2.957296 0.419462,-1.050136 0.623384,-2.133326 0.485652,-3.272238 -0.22964,-1.879324 -0.99689,-3.471671 -2.368332,-4.720254 -1.621578,-1.473935 -3.510396,-2.064083 -5.636032,-1.735343 -3.45726,0.53579 -5.963586,3.719255 -5.95027,7.293465 z" />
+      
+      <!-- Bottom-Right Petal (Red) -->
+      <path
+         style="fill:url(#radialGradient2517);"
+         filter="url(#petalShadow)"
+         d="m 42.894854,45.998033 c -0.435154,0.0132 -0.92375,-0.04062 -1.412214,-0.14436 -1.445174,-0.316356 -2.672642,-0.973434 -3.615956,-2.138388 -0.573684,-0.710394 -1.055976,-1.480258 -1.471696,-2.289948 -0.488728,-0.954048 -0.897096,-1.94805 -1.253202,-2.954234 -0.435154,-1.21709 -0.804654,-2.46077 -1.089068,-3.717812 -0.15796,-0.704236 0.0196,-1.145432 0.798484,-1.388038 0.989404,-0.309152 1.98616,0.585556 3.00222,-0.80969 1.682184,-0.368624 3.377764,-0.605072 5.107218,-0.54678 0.488596,0.0196 0.976142,0.07204 1.458436,0.15758 1.398952,0.243786 2.58637,0.888682 3.55621,1.908228 1.656576,1.737144 2.31548,3.8099 1.90698,6.172554 -0.587076,3.376042 -3.582994,5.77747 -6.987412,5.750878 z" />
+      
+      <!-- Bottom-Left Petal (Yellow-Green) -->
+      <path
+         style="fill:url(#radialGradient2852);"
+         filter="url(#petalShadow)"
+         d="m 21.105156,45.998033 c 0.435154,0.0132 0.92375,-0.04062 1.412216,-0.14436 1.445174,-0.316356 2.67264,-0.973434 3.615954,-2.138388 0.573684,-0.710394 1.055978,-1.480258 1.471698,-2.289948 0.488728,-0.954048 0.897094,-1.94805 1.253202,-2.954234 0.435154,-1.21709 0.804652,-2.46077 1.089066,-3.717812 -0.15796,-0.704236 -0.0196,-1.145432 -0.798484,-1.388038 -0.989404,-0.309152 -1.986162,-0.585556 -3.002218,-0.80969 -1.682186,-0.368624 -3.377764,-0.605072 -5.107218,-0.54678 -0.488596,0.0196 -0.976144,0.07204 -1.458436,0.15758 -1.398954,0.243786 -2.586371,0.888682 -3.55621,1.908228 -1.656578,1.737144 -2.315481,3.8099 -1.906982,6.172554 0.587077,3.376042 3.582994,5.77747 6.987412,5.750878 z" />
+    </g>
+  </g>
+</svg>

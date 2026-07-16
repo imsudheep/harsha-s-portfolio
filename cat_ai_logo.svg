@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cat-ai-logo-svg">
+  <!-- Minimalist Notion-style Cat Face -->
+  <!-- Left Ear -->
+  <path d="M5 10 L3 4 L9 7" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none" />
+  <!-- Right Ear -->
+  <path d="M19 10 L21 4 L15 7" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none" />
+  <!-- Head Outline / Jaw -->
+  <path d="M3 10 C3 16, 21 16, 21 10" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none" />
+  
+  <!-- Eyes (Minimalist curved lines like happy closed eyes) -->
+  <path d="M7 10 C8 11, 9 11, 10 10" stroke="currentColor" stroke-width="1.8" />
+  <path d="M14 10 C15 11, 16 11, 17 10" stroke="currentColor" stroke-width="1.8" />
+  
+  <!-- Nose and Mouth -->
+  <path d="M12 11.5 L12 12 C11.5 12.5, 11 12.5, 11 13" stroke="currentColor" stroke-width="1.5" />
+  <path d="M12 12 C12.5 12.5, 13 12.5, 13 13" stroke="currentColor" stroke-width="1.5" />
+  
+  <!-- Whiskers -->
+  <path d="M4 12 L1.5 12.5" stroke="currentColor" stroke-width="1.5" />
+  <path d="M4 13 L2 14" stroke="currentColor" stroke-width="1.5" />
+  <path d="M20 12 L22.5 12.5" stroke="currentColor" stroke-width="1.5" />
+  <path d="M20 13 L22 14" stroke="currentColor" stroke-width="1.5" />
+
+  <!-- Magic Sparkles (Notion-style) -->
+  <!-- Left Small Sparkle -->
+  <path d="M4.5 2.5 L5 1.5 L5.5 2.5 L6.5 3 L5.5 3.5 L5 4.5 L4.5 3.5 L3.5 3 Z" fill="currentColor" stroke="none" />
+  <!-- Center Main Sparkle -->
+  <path d="M11 2 L12 0 L13 2 L15 3 L13 4 L12 6 L11 4 L9 3 Z" fill="currentColor" stroke="none" />
+  <!-- Right Small Sparkle -->
+  <path d="M18.5 2.5 L19 1.5 L19.5 2.5 L20.5 3 L19.5 3.5 L19 4.5 L18.5 3.5 L17.5 3 Z" fill="currentColor" stroke="none" />
+</svg>

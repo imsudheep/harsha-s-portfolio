@@ -1,0 +1,50 @@
+<svg width="352" height="510" viewBox="0 0 352 510" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Obsidian Shield Base Gradient -->
+    <linearGradient id="shield_grad" x1="0" y1="0" x2="352" y2="510" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1C1C20"/>
+      <stop offset="0.6" stop-color="#0E0E10"/>
+      <stop offset="1" stop-color="#050506"/>
+    </linearGradient>
+    
+    <!-- Metallic Rim Gradient -->
+    <linearGradient id="laser_rim" x1="0" y1="0" x2="352" y2="510" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.65"/>
+      <stop offset="0.3" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="0.8" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.45"/>
+    </linearGradient>
+
+    <!-- Silk White Cutout Gradient -->
+    <linearGradient id="silk_white" x1="72" y1="80" x2="280" y2="362" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E4E4E7"/>
+    </linearGradient>
+
+    <filter id="cutout_shadow" x="0" y="0" width="352" height="510" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Shield Pennant Body -->
+  <path d="M 4 4 H 348 V 406 L 176 504 L 4 406 Z" fill="url(#shield_grad)" stroke="url(#laser_rim)" stroke-width="5"/>
+
+  <!-- Scaled Inner Cutouts with Elegant Breathing Room Padding -->
+  <g filter="url(#cutout_shadow)">
+    <!-- Row 1: D Monogram + Top Right Bar -->
+    <path d="M 72 80 H 96 C 110 80 121 91 121 105 C 121 119 110 130 96 130 H 72 V 80 Z" fill="url(#silk_white)"/>
+    <rect x="138" y="96" width="142" height="34" fill="url(#silk_white)"/>
+    
+    <!-- Row 2: Long Bar -->
+    <rect x="72" y="158" width="208" height="34" fill="url(#silk_white)"/>
+    
+    <!-- Row 3: Medium Bar -->
+    <rect x="72" y="220" width="168" height="34" fill="url(#silk_white)"/>
+    
+    <!-- Row 4: Short Bar -->
+    <rect x="72" y="282" width="108" height="34" fill="url(#silk_white)"/>
+    
+    <!-- Row 5: Mini Bar -->
+    <rect x="72" y="344" width="60" height="24" fill="url(#silk_white)"/>
+  </g>
+</svg>

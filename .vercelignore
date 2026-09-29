@@ -1,19 +1,6 @@
-# Exclude Bluekin app files and backups
-bluekin_backup
-app.js
-nutrition_db.js
-bluekin-release.apk
-style.css
-package.json
-package-lock.json
-.env*
-
-# Exclude zip files
+# Exclude APKs & backups
+*.apk
 *.zip
-portfolio.zip
-harshavardhan_portfolio.zip
-portfolio_site.zip
-portfolio_website_code.zip
 
 # System & IDE files
 .git
@@ -21,3 +8,4 @@ portfolio_website_code.zip
 .vscode
 .DS_Store
 node_modules
+

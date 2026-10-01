@@ -158,12 +158,13 @@ export const HomeView = ({ onQuickNew }) => {
             <button
               onClick={() => setActiveView('PROJECTS')}
               style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.25)',
-                color: '#FFFFFF',
+                backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                color: 'inherit',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
                 padding: '0.45rem 0.9rem',
                 borderRadius: '8px',
                 fontSize: '0.775rem',
-                fontWeight: '700'
+                fontWeight: '600'
               }}
             >
               View Projects →
@@ -185,12 +186,13 @@ export const HomeView = ({ onQuickNew }) => {
             <button
               onClick={() => setActiveView('PROJECTS')}
               style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.25)',
-                color: '#FFFFFF',
+                backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                color: 'inherit',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
                 padding: '0.45rem 0.9rem',
                 borderRadius: '8px',
                 fontSize: '0.775rem',
-                fontWeight: '700'
+                fontWeight: '600'
               }}
             >
               View Projects →
@@ -212,12 +214,13 @@ export const HomeView = ({ onQuickNew }) => {
             <button
               onClick={() => setActiveView('DOCUMENTS')}
               style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.25)',
-                color: '#FFFFFF',
+                backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                color: 'inherit',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
                 padding: '0.45rem 0.9rem',
                 borderRadius: '8px',
                 fontSize: '0.775rem',
-                fontWeight: '700'
+                fontWeight: '600'
               }}
             >
               Open Vault →

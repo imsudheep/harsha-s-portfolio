@@ -1,95 +1,93 @@
-/* FLOV — Professional Modern SaaS Web Application Design System */
-/* Inspired by Curved Left Rail & Color-Coded Cards Aesthetics */
+/* FLOV — Professional Formal Digital Office Design System */
+/* Clean, flat, subtle aesthetics — No glowing effects, no vibrant gradients */
 
 :root {
-  --bg-main: #F4F5F8;
-  --bg-sidebar: #1E40AF; /* Royal Blue Left Curved Rail */
-  --bg-sidebar-nav: #FFFFFF;
+  --bg-main: #F8FAFC;
+  --bg-sidebar: #1E40AF; /* Primary Royal Blue Task Bar */
+  --bg-sidebar-nav: #FFFFFF; /* Optional White Workspace Task Bar */
   --bg-card: #FFFFFF;
-  --bg-card-hover: #F8FAFC;
-  --bg-elevated: #EEF2FF;
+  --bg-card-hover: #F1F5F9;
+  --bg-elevated: #F1F5F9;
   --bg-input: #FFFFFF;
   
-  --border-subtle: rgba(0, 0, 0, 0.06);
-  --border-medium: rgba(0, 0, 0, 0.12);
-  --border-active: rgba(30, 64, 175, 0.3);
+  --border-subtle: #E2E8F0;
+  --border-medium: #CBD5E1;
+  --border-active: #94A3B8;
   
   --text-primary: #0F172A;
-  --text-secondary: #475569;
-  --text-muted: #94A3B8;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
 
-  /* Vivid Professional Color Accents (Inspired by Reference Image) */
-  --accent-blue: #1D4ED8;
-  --accent-blue-light: #2563EB;
-  --accent-amber: #F59E0B;
+  /* Formal Non-Vivid Palette */
+  --accent-blue: #2563EB;
+  --accent-amber: #D97706;
   --accent-coral: #E11D48;
   --accent-emerald: #059669;
-  --accent-cyan: #0284C7;
 
-  /* Status Badges */
-  --status-working-bg: #EEF2FF;
-  --status-working-text: #1D4ED8;
+  /* Status Badges - Soft Muted Tints */
+  --status-working-bg: #EFF6FF;
+  --status-working-text: #1E40AF;
   --status-working-border: #BFDBFE;
 
   --status-queue-bg: #F0F9FF;
-  --status-queue-text: #0284C7;
+  --status-queue-text: #0369A1;
   --status-queue-border: #BAE6FD;
 
-  --status-revision-bg: #FFFBEB;
-  --status-revision-text: #D97706;
+  --status-revision-bg: #FEF3C7;
+  --status-revision-text: #92400E;
   --status-revision-border: #FDE68A;
 
   --status-completed-bg: #ECFDF5;
-  --status-completed-text: #059669;
+  --status-completed-text: #047857;
   --status-completed-border: #A7F3D0;
 
-  --status-blocked-bg: #FFF1F2;
-  --status-blocked-text: #E11D48;
+  --status-blocked-bg: #FFE4E6;
+  --status-blocked-text: #9F1239;
   --status-blocked-border: #FECDD3;
 
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-display: 'Plus Jakarta Sans', var(--font-sans);
   --font-mono: 'JetBrains Mono', monospace;
   
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
 }
 
 [data-theme="dark"] {
-  --bg-main: #0B0C10;
-  --bg-sidebar: #1E3A8A; /* Royal Dark Blue Left Curved Rail */
-  --bg-sidebar-nav: #121319;
-  --bg-card: #14161F;
-  --bg-card-hover: #1A1D2A;
-  --bg-elevated: #1E2235;
-  --bg-input: #12141F;
+  --bg-main: #0F172A;
+  --bg-sidebar: #1E3A8A; /* Royal Blue Task Bar */
+  --bg-sidebar-nav: #1E293B;
+  --bg-card: #1E293B;
+  --bg-card-hover: #334155;
+  --bg-elevated: #334155;
+  --bg-input: #1E293B;
   
-  --border-subtle: rgba(255, 255, 255, 0.07);
-  --border-medium: rgba(255, 255, 255, 0.14);
-  --border-active: rgba(59, 130, 246, 0.4);
+  --border-subtle: #334155;
+  --border-medium: #475569;
+  --border-active: #64748B;
   
-  --text-primary: #FAFAFA;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
 
-  --status-working-bg: rgba(59, 130, 246, 0.12);
+  --status-working-bg: rgba(37, 99, 235, 0.15);
   --status-working-text: #60A5FA;
-  --status-working-border: rgba(59, 130, 246, 0.3);
+  --status-working-border: rgba(37, 99, 235, 0.3);
 
-  --status-queue-bg: rgba(56, 189, 248, 0.12);
+  --status-queue-bg: rgba(3, 105, 161, 0.15);
   --status-queue-text: #38BDF8;
-  --status-queue-border: rgba(56, 189, 248, 0.3);
+  --status-queue-border: rgba(3, 105, 161, 0.3);
 
-  --status-revision-bg: rgba(245, 158, 11, 0.12);
+  --status-revision-bg: rgba(217, 119, 6, 0.15);
   --status-revision-text: #FBBF24;
-  --status-revision-border: rgba(245, 158, 11, 0.3);
+  --status-revision-border: rgba(217, 119, 6, 0.3);
 
-  --status-completed-bg: rgba(16, 185, 129, 0.12);
+  --status-completed-bg: rgba(5, 150, 105, 0.15);
   --status-completed-text: #34D399;
-  --status-completed-border: rgba(16, 185, 129, 0.3);
+  --status-completed-border: rgba(5, 150, 105, 0.3);
 
-  --status-blocked-bg: rgba(225, 29, 72, 0.12);
+  --status-blocked-bg: rgba(225, 29, 72, 0.15);
   --status-blocked-text: #FB7185;
   --status-blocked-border: rgba(225, 29, 72, 0.3);
 }
@@ -104,14 +102,14 @@ body {
   font-family: var(--font-sans);
   background-color: var(--bg-main);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
-/* Full Viewport Shell with Curved Blue Left Rail */
+/* Full Viewport Shell */
 .app-viewport {
   display: flex;
   width: 100vw;
@@ -120,49 +118,46 @@ body {
   background-color: var(--bg-main);
 }
 
-/* Curved Royal Blue Left Rail Bar */
+/* Primary Curved Royal Blue Left Task Bar */
 .rail-sidebar {
-  width: 76px;
+  width: 72px;
   background-color: var(--bg-sidebar);
-  border-top-right-radius: 28px;
-  border-bottom-right-radius: 28px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 0.5rem;
+  padding: 1.25rem 0.5rem;
   z-index: 20;
-  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.08);
   flex-shrink: 0;
 }
 
 .rail-icon-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: rgba(255, 255, 255, 0.75);
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .rail-icon-btn:hover {
   color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.15);
-  transform: scale(1.05);
 }
 
 .rail-icon-btn-active {
   color: #FFFFFF !important;
-  background-color: rgba(255, 255, 255, 0.25) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.22) !important;
 }
 
-/* Secondary Sidebar Panel */
+/* Optional White Navigation Task Bar Panel */
 .sidebar-panel {
-  width: 220px;
+  width: 230px;
   background-color: var(--bg-sidebar-nav);
   border-right: 1px solid var(--border-subtle);
   display: flex;
@@ -177,9 +172,9 @@ body {
 
 .profile-switcher-pill {
   background: var(--bg-card);
-  border: 1px solid var(--border-medium);
+  border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  padding: 0.65rem 0.75rem;
+  padding: 0.6rem 0.75rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -190,7 +185,7 @@ body {
 }
 
 .profile-switcher-pill:hover {
-  border-color: var(--border-active);
+  border-color: var(--border-medium);
   background: var(--bg-card-hover);
 }
 
@@ -200,13 +195,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.65rem 0.85rem;
+  padding: 0.6rem 0.8rem;
   border-radius: var(--radius-md);
   font-size: 0.825rem;
   font-weight: 500;
   color: var(--text-secondary);
   border: 1px solid transparent;
-  transition: all 0.15s ease;
+  transition: background-color 0.15s ease;
 }
 
 .nav-pill:hover {
@@ -217,7 +212,7 @@ body {
 .nav-pill-active {
   background-color: var(--bg-elevated) !important;
   color: var(--text-primary) !important;
-  border: 1px solid var(--border-medium) !important;
+  border: 1px solid var(--border-subtle) !important;
   font-weight: 600;
 }
 
@@ -227,12 +222,12 @@ body {
   color: var(--text-muted);
   font-family: var(--font-mono);
   background: var(--bg-main);
-  padding: 0.1rem 0.45rem;
-  border-radius: 6px;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
   border: 1px solid var(--border-subtle);
 }
 
-/* Inputs & Buttons */
+/* Inputs & Buttons - Clean, Flat, Non-Glowing */
 input, textarea, select, button {
   font-family: inherit;
   font-size: 0.85rem;
@@ -243,7 +238,7 @@ input, textarea, select {
   color: var(--text-primary);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
-  padding: 0.7rem 0.9rem;
+  padding: 0.65rem 0.85rem;
   width: 100%;
   outline: none;
   transition: border-color 0.15s ease;
@@ -251,7 +246,6 @@ input, textarea, select {
 
 input:focus, textarea:focus, select:focus {
   border-color: var(--accent-blue);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 button {
@@ -263,40 +257,35 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
-/* Vivid CTA Button (Inspired by Coral Red button in reference image) */
+/* Clean Solid Primary CTA Button (No Glow) */
 .btn-primary {
-  background-color: var(--accent-coral);
+  background-color: var(--accent-blue);
   color: #FFFFFF;
-  font-weight: 700;
-  padding: 0.7rem 1.4rem;
-  border-radius: 12px;
+  font-weight: 600;
+  padding: 0.65rem 1.3rem;
+  border-radius: var(--radius-md);
   border: none;
-  letter-spacing: -0.01em;
-  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.25);
 }
 
 .btn-primary:hover {
-  transform: translateY(-1.5px);
-  box-shadow: 0 6px 20px rgba(225, 29, 72, 0.35);
-  opacity: 0.95;
+  background-color: #1E40AF;
 }
 
 .btn-secondary {
   background-color: var(--bg-card);
   color: var(--text-primary);
   border: 1px solid var(--border-medium);
-  padding: 0.65rem 1.2rem;
-  border-radius: 12px;
-  font-weight: 600;
+  padding: 0.6rem 1.1rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
 }
 
 .btn-secondary:hover {
   border-color: var(--border-active);
   background-color: var(--bg-card-hover);
-  transform: translateY(-1px);
 }
 
 .btn-ghost {
@@ -307,66 +296,81 @@ button {
 
 .btn-ghost:hover {
   color: var(--text-primary);
-  background-color: var(--border-subtle);
+  background-color: var(--bg-card-hover);
 }
 
-/* Professional Cards with Smooth Radii */
+/* Flat Cards with Clean 1px Borders (No Glowing Shadows) */
 .card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
 }
 
 .card:hover {
   border-color: var(--border-medium);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-/* Color-Coded Category Hero Cards (Matching Reference Image Style) */
+/* Identical Non-Vibrant Soft Category Cards */
 .card-service-amber {
-  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
-  color: #FFFFFF !important;
-  border: none !important;
+  background-color: #FEF3C7 !important;
+  border: 1px solid #FDE68A !important;
+  color: #92400E !important;
 }
-
 .card-service-amber * {
-  color: #FFFFFF !important;
+  color: #92400E !important;
 }
 
 .card-service-blue {
-  background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%) !important;
-  color: #FFFFFF !important;
-  border: none !important;
+  background-color: #EFF6FF !important;
+  border: 1px solid #BFDBFE !important;
+  color: #1E40AF !important;
 }
-
 .card-service-blue * {
-  color: #FFFFFF !important;
+  color: #1E40AF !important;
 }
 
 .card-service-coral {
-  background: linear-gradient(135deg, #E11D48 0%, #F43F5E 100%) !important;
-  color: #FFFFFF !important;
-  border: none !important;
+  background-color: #FFE4E6 !important;
+  border: 1px solid #FECDD3 !important;
+  color: #9F1239 !important;
+}
+.card-service-coral * {
+  color: #9F1239 !important;
 }
 
-.card-service-coral * {
-  color: #FFFFFF !important;
+/* Dark mode identical cards */
+[data-theme="dark"] .card-service-amber {
+  background-color: rgba(245, 158, 11, 0.12) !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  color: #FBBF24 !important;
 }
+[data-theme="dark"] .card-service-amber * { color: #FBBF24 !important; }
+
+[data-theme="dark"] .card-service-blue {
+  background-color: rgba(37, 99, 235, 0.12) !important;
+  border: 1px solid rgba(37, 99, 235, 0.3) !important;
+  color: #60A5FA !important;
+}
+[data-theme="dark"] .card-service-blue * { color: #60A5FA !important; }
+
+[data-theme="dark"] .card-service-coral {
+  background-color: rgba(225, 29, 72, 0.12) !important;
+  border: 1px solid rgba(225, 29, 72, 0.3) !important;
+  color: #FB7185 !important;
+}
+[data-theme="dark"] .card-service-coral * { color: #FB7185 !important; }
 
 /* Badges */
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.25rem 0.65rem;
-  border-radius: 8px;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
   font-size: 0.675rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -381,12 +385,11 @@ button {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 3px; }
 
-/* Modal Overlay */
+/* Modal Overlay - Clean Dark Overlay (No Heavy Blur) */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(4px);
+  background-color: rgba(15, 23, 42, 0.6);
   z-index: 50;
   display: flex;
   align-items: center;
@@ -402,7 +405,7 @@ button {
   margin: 0 auto;
   background: #FFFFFF !important;
   color: #111827 !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid #E5E7EB;
   font-family: 'Inter', sans-serif;
   font-size: 13px;
   line-height: 1.6;
@@ -428,6 +431,6 @@ button {
   body { background: #FFFFFF !important; color: #000000 !important; }
   .no-print { display: none !important; }
   .app-viewport { display: block !important; height: auto !important; width: 100% !important; }
-  .a4-document-container { box-shadow: none !important; margin: 0 !important; width: 100% !important; padding: 0 !important; }
+  .a4-document-container { margin: 0 !important; width: 100% !important; padding: 0 !important; border: none !important; }
   @page { size: A4; margin: 15mm; }
 }

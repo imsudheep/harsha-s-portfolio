@@ -55,21 +55,21 @@
 }
 
 [data-theme="dark"] {
-  --bg-main: #0F172A;
-  --bg-sidebar: #1E3A8A; /* Royal Blue Task Bar */
-  --bg-sidebar-nav: #1E293B;
-  --bg-card: #1E293B;
-  --bg-card-hover: #334155;
-  --bg-elevated: #334155;
-  --bg-input: #1E293B;
+  --bg-main: #0B0C10; /* Pure Black Main Background */
+  --bg-sidebar: #0F172A; /* Dark Slate Task Bar */
+  --bg-sidebar-nav: #14161F; /* Pure Dark Black Navigation Panel */
+  --bg-card: #14161F; /* Pure Dark Black Card */
+  --bg-card-hover: #1A1D2A; /* Dark Black Hover */
+  --bg-elevated: #1E2235; /* Dark Black Elevated */
+  --bg-input: #12141F; /* Dark Black Input */
   
-  --border-subtle: #334155;
-  --border-medium: #475569;
-  --border-active: #64748B;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-active: rgba(255, 255, 255, 0.28);
   
-  --text-primary: #F8FAFC;
-  --text-secondary: #CBD5E1;
-  --text-muted: #94A3B8;
+  --text-primary: #FAFAFA;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
 
   --status-working-bg: rgba(37, 99, 235, 0.15);
   --status-working-text: #60A5FA;
@@ -504,8 +504,16 @@ button {
 }
 
 [data-theme="dark"] .floating-capsule-bar {
-  background-color: #1E293B;
+  background-color: #14161F;
   border-color: rgba(255, 255, 255, 0.15);
+}
+
+.desktop-only-section {
+  display: block;
+}
+
+.mobile-only-section {
+  display: none;
 }
 
 .floating-capsule-item {

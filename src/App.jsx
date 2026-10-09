@@ -79,7 +79,7 @@ export const AppContent = () => {
       <Sidebar onQuickNew={handleQuickNewDocument} />
 
       {/* Main Content Area */}
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0, height: '100%', overflow: 'hidden' }}>
+      <div className="app-main-wrapper" style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0, minHeight: 0, height: '100%', overflow: 'hidden' }}>
         <Header onQuickNew={handleQuickNewDocument} />
 
         <main style={{ flex: 1, padding: '2rem 2.5rem 4rem 2.5rem', overflowY: 'auto' }}>

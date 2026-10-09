@@ -71,7 +71,7 @@ export const Sidebar = ({ onQuickNew }) => {
   const activeNavItems = activeSpaceId === 'MY_SPACE' ? mySpaceNav : sharedSpaceNav;
 
   return (
-    <div style={{ display: 'flex', height: '100%' }} className="no-print">
+    <div style={{ display: 'flex', height: '100%' }} className="sidebar-wrapper no-print">
       {/* ==================================================
           1. PRIMARY ROYAL BLUE LEFT TASK BAR
          ================================================== */}

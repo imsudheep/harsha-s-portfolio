@@ -487,10 +487,12 @@ button {
 .floating-capsule-bar {
   position: fixed;
   bottom: 1.15rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 2rem);
+  left: 1rem;
+  right: 1rem;
+  width: auto;
   max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
   height: 60px;
   background-color: rgba(15, 23, 42, 0.92);
   backdrop-filter: blur(16px);
@@ -503,6 +505,7 @@ button {
   z-index: 100;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
 }
 
 [data-theme="dark"] .floating-capsule-bar {
@@ -618,8 +621,26 @@ button {
     overflow: hidden;
   }
 
+  .desktop-only-section {
+    display: none !important;
+  }
+
+  .mobile-only-section {
+    display: block !important;
+  }
+
+  .app-main-wrapper {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: hidden !important;
+  }
+
   /* Placement: On Mobile Phones, hide desktop sidebar & desktop header */
-  .rail-sidebar, .sidebar-panel {
+  .sidebar-wrapper, .rail-sidebar, .sidebar-panel {
     display: none !important;
   }
 

@@ -72,7 +72,10 @@ export const AppContent = () => {
 
   return (
     <div className="app-viewport">
-      {/* Left Navigation Sidebar */}
+      {/* Mobile Header & Bottom Navigation Bar (Active on Mobile Phones <= 768px) */}
+      <MobileNav onQuickNew={handleQuickNewDocument} />
+
+      {/* Left Navigation Sidebar (Active on Laptops & Desktops > 768px) */}
       <Sidebar onQuickNew={handleQuickNewDocument} />
 
       {/* Main Content Area */}

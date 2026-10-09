@@ -55,21 +55,21 @@
 }
 
 [data-theme="dark"] {
-  --bg-main: #0B0C10; /* Pure Black Main Background */
-  --bg-sidebar: #0F172A; /* Dark Slate Task Bar */
-  --bg-sidebar-nav: #14161F; /* Pure Dark Black Navigation Panel */
-  --bg-card: #14161F; /* Pure Dark Black Card */
-  --bg-card-hover: #1A1D2A; /* Dark Black Hover */
-  --bg-elevated: #1E2235; /* Dark Black Elevated */
-  --bg-input: #12141F; /* Dark Black Input */
+  --bg-main: #09090B; /* Pure Neutral Pitch Black Main Background */
+  --bg-sidebar: #121215; /* Pitch Dark Charcoal Task Bar */
+  --bg-sidebar-nav: #121215; /* Pitch Dark Charcoal Navigation Panel */
+  --bg-card: #121215; /* Pitch Dark Charcoal Card */
+  --bg-card-hover: #1A1A1E; /* Neutral Hover */
+  --bg-elevated: #1E1E24; /* Neutral Elevated */
+  --bg-input: #151519; /* Pitch Dark Input */
   
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-medium: rgba(255, 255, 255, 0.16);
   --border-active: rgba(255, 255, 255, 0.28);
   
   --text-primary: #FAFAFA;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
 
   --status-working-bg: rgba(37, 99, 235, 0.15);
   --status-working-text: #60A5FA;
@@ -486,26 +486,29 @@ button {
 /* Floating Bottom Capsule Navigation Bar (Matching Reference Mockup Bottom Bar) */
 .floating-capsule-bar {
   position: fixed;
-  bottom: 1.25rem;
+  bottom: 1.15rem;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% - 2.5rem);
+  width: calc(100% - 2rem);
   max-width: 380px;
-  height: 62px;
-  background-color: #0F172A;
+  height: 60px;
+  background-color: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-radius: 9999px;
-  padding: 0 0.75rem;
+  padding: 0 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  z-index: 45;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 [data-theme="dark"] .floating-capsule-bar {
-  background-color: #14161F;
+  background-color: rgba(18, 18, 21, 0.94);
   border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
 }
 
 .desktop-only-section {
@@ -627,6 +630,8 @@ button {
   /* Placement: Show Mobile Top Bar & Bottom Tab Bar */
   .mobile-header {
     display: flex !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   .mobile-bottom-bar {
@@ -635,16 +640,17 @@ button {
 
   /* UX Alignment: Vertical fluid scroll padding so content never overlaps bottom bar */
   main {
-    padding: 1rem 1rem 5.5rem 1rem !important;
+    padding: 1rem 1rem 6.5rem 1rem !important;
     overflow-x: hidden !important;
     width: 100% !important;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* UX Alignment: Grid elements stack into 1-column fluid layouts */
   .hero-grid-split {
     grid-template-columns: 1fr !important;
-    gap: 1.15rem !important;
-    margin-bottom: 1.5rem !important;
+    gap: 1rem !important;
+    margin-bottom: 1.25rem !important;
   }
 
   .card {
@@ -652,20 +658,43 @@ button {
     border-radius: var(--radius-md) !important;
   }
 
-  /* Touch Targets */
-  input, textarea, select, button {
+  /* Form & Input Touch Enhancements */
+  input, textarea, select {
+    font-size: 0.95rem !important;
+    padding: 0.75rem 0.85rem !important;
+    min-height: 44px !important;
+  }
+
+  button.btn-primary, button.btn-secondary {
+    min-height: 44px !important;
     font-size: 0.9rem !important;
+    padding: 0.65rem 1.2rem !important;
   }
 
   /* Modals: Centered touch overlays */
   .modal-overlay {
     padding: 0.75rem !important;
+    align-items: flex-end !important;
   }
 
   .modal-overlay > div {
     width: 100% !important;
     max-width: 100% !important;
-    border-radius: var(--radius-md) !important;
+    border-radius: 20px 20px 0 0 !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+
+  /* Mobile Printable A4 Preview Container Scaling */
+  .a4-document-container {
+    width: 100% !important;
+    min-height: auto !important;
+    padding: 15px !important;
+    font-size: 11px !important;
+  }
+
+  .a4-document-container table {
+    font-size: 11px !important;
   }
 }
 

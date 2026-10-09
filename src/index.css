@@ -435,6 +435,104 @@ button {
   @page { size: A4; margin: 15mm; }
 }
 
+/* Calendar Capsule Row (Inspired by Reference Mockup) */
+.calendar-capsule-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  overflow-x: auto;
+  padding: 0.35rem 0.1rem;
+  margin-bottom: 2rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.calendar-capsule-row::-webkit-scrollbar {
+  display: none;
+}
+
+.calendar-capsule-item {
+  flex-shrink: 0;
+  width: 54px;
+  height: 70px;
+  border-radius: 9999px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.calendar-capsule-item:hover {
+  border-color: var(--border-medium);
+  background-color: var(--bg-card-hover);
+}
+
+.calendar-capsule-active {
+  background-color: var(--text-primary) !important;
+  color: var(--bg-main) !important;
+  border-color: var(--text-primary) !important;
+}
+
+.calendar-capsule-active * {
+  color: var(--bg-main) !important;
+}
+
+/* Floating Bottom Capsule Navigation Bar (Matching Reference Mockup Bottom Bar) */
+.floating-capsule-bar {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2.5rem);
+  max-width: 380px;
+  height: 62px;
+  background-color: #0F172A;
+  border-radius: 9999px;
+  padding: 0 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 45;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .floating-capsule-bar {
+  background-color: #1E293B;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.floating-capsule-item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.floating-capsule-item:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.floating-capsule-active {
+  color: #0F172A !important;
+  background-color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Responsive Split Grid Helper */
 .hero-grid-split {
   display: grid;

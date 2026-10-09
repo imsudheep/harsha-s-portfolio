@@ -95,8 +95,8 @@ export const MobileNav = ({ onQuickNew }) => {
         </div>
       </div>
 
-      {/* Mobile Bottom Navigation Bar (Notion Style 1-Tap Switching) */}
-      <div className="mobile-bottom-bar no-print">
+      {/* Floating Bottom Capsule Navigation Bar (Matching Reference Mockup) */}
+      <div className="mobile-bottom-bar floating-capsule-bar no-print">
         {bottomNavItems.map(item => {
           const Icon = item.icon;
           const isActive = activeView === item.id || 
@@ -106,10 +106,10 @@ export const MobileNav = ({ onQuickNew }) => {
             <button
               key={item.id}
               onClick={() => setActiveView(item.id)}
-              className={`mobile-bottom-tab ${isActive ? 'mobile-bottom-tab-active' : ''}`}
+              className={`floating-capsule-item ${isActive ? 'floating-capsule-active' : ''}`}
+              title={item.label}
             >
-              <Icon size={19} strokeWidth={isActive ? 2.2 : 1.7} />
-              <span>{item.label}</span>
+              <Icon size={20} strokeWidth={isActive ? 2.2 : 1.8} />
             </button>
           );
         })}

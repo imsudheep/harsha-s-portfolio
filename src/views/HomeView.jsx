@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { 
   ArrowRight, 
@@ -6,7 +6,10 @@ import {
   FolderKanban,
   FileText,
   Video,
-  Sparkles
+  Sparkles,
+  Calendar,
+  Clock,
+  Search
 } from 'lucide-react';
 
 export const HomeView = ({ onQuickNew }) => {
@@ -14,8 +17,21 @@ export const HomeView = ({ onQuickNew }) => {
     projects, 
     contacts, 
     setActiveView, 
-    setSelectedProjectId
+    setSelectedProjectId,
+    profile
   } = useApp();
+
+  const [selectedDay, setSelectedDay] = useState(14);
+
+  const weekDays = [
+    { day: 'Sun', date: 11 },
+    { day: 'Mon', date: 12 },
+    { day: 'Tue', date: 13 },
+    { day: 'Wed', date: 14 },
+    { day: 'Thu', date: 15 },
+    { day: 'Fri', date: 16 },
+    { day: 'Sat', date: 17 }
+  ];
 
   // Find active working or revision deliverables
   const activeWorkingItems = [];
@@ -39,23 +55,56 @@ export const HomeView = ({ onQuickNew }) => {
   } : null);
 
   return (
-    <div style={{ maxWidth: '1080px', margin: '0 auto', paddingBottom: '4rem' }}>
-      {/* Top Tagline */}
-      <div style={{ marginBottom: '1.5rem' }}>
-        <h1 style={{
-          fontFamily: 'var(--font-display)',
-          fontSize: '2rem',
-          fontWeight: '800',
-          letterSpacing: '-0.025em',
-          lineHeight: 1.1,
-          marginBottom: '0.25rem',
-          color: 'var(--text-primary)'
-        }}>
-          Let's Go
-        </h1>
-        <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-          Freelance Workspace &amp; Operations Vault
-        </p>
+    <div style={{ maxWidth: '1080px', margin: '0 auto', paddingBottom: '5rem' }}>
+      {/* Top Greeting Header (Inspired by Reference Image Header) */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
+        <div>
+          <h1 style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '1.85rem',
+            fontWeight: '800',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.1,
+            marginBottom: '0.2rem',
+            color: 'var(--text-primary)'
+          }}>
+            Hello {profile.fullName || 'Harsha'}
+          </h1>
+          <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: '500' }}>
+            Today 14 May • Freelance Workspace &amp; Vault
+          </p>
+        </div>
+      </div>
+
+      {/* Horizontal Day/Date Capsule Selector (Matching Reference Image) */}
+      <div className="calendar-capsule-row">
+        {weekDays.map(item => {
+          const isActive = selectedDay === item.date;
+          return (
+            <div
+              key={item.date}
+              onClick={() => setSelectedDay(item.date)}
+              className={`calendar-capsule-item ${isActive ? 'calendar-capsule-active' : ''}`}
+            >
+              <span style={{ fontSize: '0.675rem', fontWeight: '600', color: isActive ? '#FFFFFF' : 'var(--text-muted)' }}>
+                {item.day}
+              </span>
+              <span style={{ fontSize: '1rem', fontWeight: '800', fontFamily: 'var(--font-display)' }}>
+                {item.date}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Section Header: Your Plan */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
+        <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.35rem', fontWeight: '800', color: 'var(--text-primary)' }}>
+          Your plan
+        </h2>
+        <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: '600' }}>
+          May 2026
+        </span>
       </div>
 
       {/* ==================================================

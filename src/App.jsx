@@ -77,7 +77,6 @@ export const AppContent = () => {
 
       {/* Main Content Area */}
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0, height: '100%', overflow: 'hidden' }}>
-        <MobileNav onQuickNew={handleQuickNewDocument} />
         <Header onQuickNew={handleQuickNewDocument} />
 
         <main style={{ flex: 1, padding: '2rem 2.5rem 4rem 2.5rem', overflowY: 'auto' }}>

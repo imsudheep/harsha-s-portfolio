@@ -61,12 +61,7 @@ export const HomeView = ({ onQuickNew }) => {
       {/* ==================================================
           SECTION 1: HERO & STACKED COLOR CARDS (Matching Image)
          ================================================== */}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1.4fr 1fr',
-        gap: '1.5rem',
-        marginBottom: '3rem'
-      }}>
+      <div className="hero-grid-split">
         {/* Left Hero Card (Inspired by reference image left panel) */}
         {primaryItem && (
           <div className="card" style={{

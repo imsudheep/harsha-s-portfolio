@@ -434,3 +434,140 @@ button {
   .a4-document-container { margin: 0 !important; width: 100% !important; padding: 0 !important; border: none !important; }
   @page { size: A4; margin: 15mm; }
 }
+
+/* Responsive Split Grid Helper */
+.hero-grid-split {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .hero-grid-split {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+}
+
+/* Mobile Navigation & Responsive Layout (Notion Mobile Experience) */
+.mobile-header {
+  display: none;
+  height: 56px;
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--bg-card);
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border-subtle);
+  z-index: 40;
+  padding: 0 0.5rem;
+}
+
+.mobile-bottom-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  padding: 0.25rem 0;
+  transition: color 0.15s ease;
+}
+
+.mobile-bottom-tab-active {
+  color: var(--accent-blue) !important;
+  font-weight: 700 !important;
+}
+
+/* Multi-Device Media Queries (Mobile Phones & Tablets) */
+@media (max-width: 768px) {
+  body, .app-viewport {
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .rail-sidebar, .sidebar-panel {
+    display: none !important;
+  }
+
+  header {
+    display: none !important;
+  }
+
+  .mobile-header {
+    display: flex !important;
+  }
+
+  .mobile-bottom-bar {
+    display: flex !important;
+  }
+
+  main {
+    padding: 1rem 1rem 5.5rem 1rem !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  .card {
+    padding: 1.15rem !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  /* Responsive Tables & Containers */
+  .a4-document-container {
+    width: 100% !important;
+    min-height: auto !important;
+    padding: 10mm !important;
+    box-shadow: none !important;
+  }
+
+  /* Mobile Input & Touch Target Sizing */
+  input, textarea, select, button {
+    font-size: 0.9rem !important;
+  }
+
+  /* Modal Dialog Scaling */
+  .modal-overlay {
+    padding: 0.75rem !important;
+  }
+
+  .modal-overlay > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: var(--radius-md) !important;
+  }
+}
+
+/* Tablet / iPad Landscape Layout Adjustments (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    padding: 1.5rem 1.5rem 3rem 1.5rem !important;
+  }
+
+  .sidebar-panel {
+    width: 190px !important;
+  }
+}
+

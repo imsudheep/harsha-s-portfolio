@@ -312,60 +312,90 @@ button {
   border-color: var(--border-medium);
 }
 
-/* Color-Coded Service Cards — Single Color Monochrome Accent Rule with 100% Opaque Solid Surfaces */
+/* Color-Coded Service Cards — Solid Brand Color Background with Crisp High-Contrast White Text */
 .card-service-amber {
-  background-color: var(--bg-card) !important;
-  border: 1px solid #F59E0B !important;
-  color: #C2410C !important;
+  background-color: #F79009 !important;
+  border: 1px solid #D97706 !important;
+  color: #FFFFFF !important;
 }
 .card-service-amber * {
-  color: #C2410C !important;
+  color: #FFFFFF !important;
+}
+.card-service-amber button {
+  background-color: #0F172A !important;
+  color: #FFFFFF !important;
+  border: none !important;
 }
 
 .card-service-blue {
-  background-color: var(--bg-card) !important;
-  border: 1px solid #3B82F6 !important;
-  color: #1D4ED8 !important;
+  background-color: #3382F9 !important;
+  border: 1px solid #2563EB !important;
+  color: #FFFFFF !important;
 }
 .card-service-blue * {
-  color: #1D4ED8 !important;
+  color: #FFFFFF !important;
+}
+.card-service-blue button {
+  background-color: #0F172A !important;
+  color: #FFFFFF !important;
+  border: none !important;
 }
 
 .card-service-coral, .card-service-green {
-  background-color: var(--bg-card) !important;
-  border: 1px solid #10B981 !important;
-  color: #15803D !important;
+  background-color: #15803D !important;
+  border: 1px solid #166534 !important;
+  color: #FFFFFF !important;
 }
 .card-service-coral *, .card-service-green * {
-  color: #15803D !important;
+  color: #FFFFFF !important;
+}
+.card-service-coral button, .card-service-green button {
+  background-color: #0F172A !important;
+  color: #FFFFFF !important;
+  border: none !important;
 }
 
-/* Dark mode single monochrome color cards with standard dark charcoal surface */
+/* Dark mode: Vibrant Solid Brand Color Surfaces with Crisp High-Contrast Text */
 [data-theme="dark"] .card-service-amber {
-  background-color: var(--bg-card) !important;
-  border: 1px solid #78350F !important;
-  color: #F79009 !important;
+  background-color: #F79009 !important;
+  border: 1px solid #EA580C !important;
+  color: #0F172A !important;
 }
 [data-theme="dark"] .card-service-amber * {
-  color: #F79009 !important;
+  color: #0F172A !important;
+}
+[data-theme="dark"] .card-service-amber button {
+  background-color: #0F172A !important;
+  color: #FFFFFF !important;
+  border: none !important;
 }
 
 [data-theme="dark"] .card-service-blue {
-  background-color: var(--bg-card) !important;
-  border: 1px solid #1E3A8A !important;
-  color: #3382F9 !important;
+  background-color: #3382F9 !important;
+  border: 1px solid #2563EB !important;
+  color: #FFFFFF !important;
 }
 [data-theme="dark"] .card-service-blue * {
-  color: #3382F9 !important;
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .card-service-blue button {
+  background-color: #0F172A !important;
+  color: #FFFFFF !important;
+  border: none !important;
 }
 
 [data-theme="dark"] .card-service-coral, [data-theme="dark"] .card-service-green {
-  background-color: var(--bg-card) !important;
-  border: 1px solid #065F46 !important;
-  color: #6DC786 !important;
+  background-color: #16A34A !important;
+  border: 1px solid #15803D !important;
+  color: #FFFFFF !important;
 }
 [data-theme="dark"] .card-service-coral *, [data-theme="dark"] .card-service-green * {
-  color: #6DC786 !important;
+  color: #FFFFFF !important;
+}
+[data-theme="dark"] .card-service-coral button, [data-theme="dark"] .card-service-green button {
+  background-color: #0F172A !important;
+  color: #FFFFFF !important;
+  border: none !important;
 }
 
 /* Badges */

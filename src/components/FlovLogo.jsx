@@ -2,7 +2,7 @@ import React from 'react';
 
 /**
  * Official FLOV Brand Logo & Icon Component
- * Based on FLOV brand guidelines: Organic flowing "f" wave mark representing uninterrupted workflow + geometric lowercase "lov".
+ * Based on exact FLOV geometric brand guidelines & logo grid.
  */
 export const FlovLogoIcon = ({ size = 32, color = 'currentColor', style = {} }) => {
   return (
@@ -14,9 +14,9 @@ export const FlovLogoIcon = ({ size = 32, color = 'currentColor', style = {} }) 
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: 'block', ...style }}
     >
-      {/* Flowing 'f' wave mark stroke */}
+      {/* Exact flowing 'f' wave mark matching app icon */}
       <path
-        d="M 14 72 C 22 72 32 38 48 38 C 62 38 68 58 78 58 L 78 24 C 78 18 84 14 90 14 H 96"
+        d="M 18 78 V 64 C 18 46 32 36 48 36 C 64 36 68 50 78 50 V 22 C 78 16 84 12 90 12 H 98"
         stroke={color}
         strokeWidth="14"
         strokeLinecap="round"
@@ -37,7 +37,6 @@ export const FlovAppIcon = ({ size = 40, bg = '#FFFFFF', iconColor = '#0F172A', 
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)',
         flexShrink: 0,
         ...style
       }}
@@ -48,36 +47,54 @@ export const FlovAppIcon = ({ size = 40, bg = '#FFFFFF', iconColor = '#0F172A', 
 };
 
 export const FlovWordmark = ({ height = 28, color = 'currentColor', style = {} }) => {
+  const width = Math.round(height * 3.35);
+
   return (
-    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.2rem', height: `${height}px`, ...style }}>
-      {/* Flowing 'f' icon */}
-      <svg 
-        height={height} 
-        viewBox="0 0 100 100" 
-        fill="none" 
-        xmlns="http://www.w3.org/2000/svg"
-        style={{ display: 'block', height: '100%', width: 'auto' }}
-      >
-        <path
-          d="M 14 72 C 22 72 32 38 48 38 C 62 38 68 58 78 58 L 78 24 C 78 18 84 14 90 14 H 96"
-          stroke={color}
-          strokeWidth="14"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      {/* Geometric 'lov' text */}
-      <span style={{ 
-        fontFamily: "'Inter', sans-serif", 
-        fontWeight: 700, 
-        fontSize: `${height * 0.95}px`, 
-        letterSpacing: '-0.05em',
-        lineHeight: 1,
-        color: color,
-        marginLeft: '-2px'
-      }}>
-        lov
-      </span>
-    </div>
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 240 70"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ display: 'block', ...style }}
+    >
+      {/* 1. Geometric Flowing 'f' */}
+      <path
+        d="M 16 58 V 46 C 16 32 28 24 40 24 C 54 24 58 36 68 36 V 16 C 68 12 72 8 78 8 H 86"
+        stroke={color}
+        strokeWidth="11"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+
+      {/* 2. Geometric 'l' */}
+      <line
+        x1="106"
+        y1="8"
+        x2="106"
+        y2="58"
+        stroke={color}
+        strokeWidth="11"
+        strokeLinecap="round"
+      />
+
+      {/* 3. Geometric 'o' */}
+      <circle
+        cx="150"
+        cy="33"
+        r="20"
+        stroke={color}
+        strokeWidth="11"
+      />
+
+      {/* 4. Geometric 'v' */}
+      <path
+        d="M 190 10 L 208 56 L 226 10"
+        stroke={color}
+        strokeWidth="11"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 };

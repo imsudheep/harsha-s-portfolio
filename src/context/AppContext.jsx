@@ -74,7 +74,7 @@ export const AppProvider = ({ children }) => {
   });
 
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem(STORAGE_KEYS.THEME) || 'dark';
+    return localStorage.getItem(STORAGE_KEYS.THEME) || 'light';
   });
 
   // Space & Navigation State

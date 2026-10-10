@@ -1,8 +1,8 @@
 import React from 'react';
 
 /**
- * Official FLOV Brand Logo & Icon Component
- * Based on exact FLOV geometric brand guidelines & logo grid.
+ * Official FLOW Brand Logo & Icon Component
+ * Based on FLOW brand guidelines: Dual diagonal flowing leaf/workspace marks representing Flow + Workspace + Progress.
  */
 export const FlovLogoIcon = ({ size = 32, color = 'currentColor', style = {} }) => {
   return (
@@ -14,13 +14,15 @@ export const FlovLogoIcon = ({ size = 32, color = 'currentColor', style = {} }) 
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: 'block', ...style }}
     >
-      {/* Exact flowing 'f' wave mark matching app icon */}
+      {/* Lower-left diagonal flow mark */}
       <path
-        d="M 18 78 V 64 C 18 46 32 36 48 36 C 64 36 68 50 78 50 V 22 C 78 16 84 12 90 12 H 98"
-        stroke={color}
-        strokeWidth="14"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d="M 16 76 C 13 60 24 45 48 44 C 49 60 38 75 16 76 Z"
+        fill={color}
+      />
+      {/* Upper-right diagonal flow mark */}
+      <path
+        d="M 52 40 C 49 24 60 9 84 8 C 85 24 74 39 52 40 Z"
+        fill={color}
       />
     </svg>
   );
@@ -37,6 +39,7 @@ export const FlovAppIcon = ({ size = 40, bg = '#FFFFFF', iconColor = '#0F172A', 
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
         flexShrink: 0,
         ...style
       }}
@@ -46,55 +49,23 @@ export const FlovAppIcon = ({ size = 40, bg = '#FFFFFF', iconColor = '#0F172A', 
   );
 };
 
-export const FlovWordmark = ({ height = 28, color = 'currentColor', style = {} }) => {
-  const width = Math.round(height * 3.35);
-
+export const FlovWordmark = ({ height = 26, color = 'currentColor', style = {} }) => {
   return (
-    <svg
-      width={width}
-      height={height}
-      viewBox="0 0 240 70"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      style={{ display: 'block', ...style }}
-    >
-      {/* 1. Geometric Flowing 'f' */}
-      <path
-        d="M 16 58 V 46 C 16 32 28 24 40 24 C 54 24 58 36 68 36 V 16 C 68 12 72 8 78 8 H 86"
-        stroke={color}
-        strokeWidth="11"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-
-      {/* 2. Geometric 'l' */}
-      <line
-        x1="106"
-        y1="8"
-        x2="106"
-        y2="58"
-        stroke={color}
-        strokeWidth="11"
-        strokeLinecap="round"
-      />
-
-      {/* 3. Geometric 'o' */}
-      <circle
-        cx="150"
-        cy="33"
-        r="20"
-        stroke={color}
-        strokeWidth="11"
-      />
-
-      {/* 4. Geometric 'v' */}
-      <path
-        d="M 190 10 L 208 56 L 226 10"
-        stroke={color}
-        strokeWidth="11"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
+    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.65rem', height: `${height}px`, ...style }}>
+      {/* Dual Flow Marks */}
+      <FlovLogoIcon size={height} color={color} />
+      {/* Geometric 'FLOW' Uppercase Wordmark */}
+      <span style={{ 
+        fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif", 
+        fontWeight: 700, 
+        fontSize: `${height * 0.78}px`, 
+        letterSpacing: '0.22em',
+        lineHeight: 1,
+        color: color,
+        textTransform: 'uppercase'
+      }}>
+        FLOW
+      </span>
+    </div>
   );
 };

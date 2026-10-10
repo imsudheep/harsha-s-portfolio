@@ -70,8 +70,7 @@ export const Header = ({ onQuickNew }) => {
             fontSize: '0.8rem',
             display: 'flex',
             alignItems: 'center',
-            gap: '0.65rem',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
+            gap: '0.65rem'
           }}
           className="btn-secondary"
         >
@@ -104,8 +103,7 @@ export const Header = ({ onQuickNew }) => {
           backgroundColor: 'var(--bg-card)',
           padding: '0.35rem 0.75rem 0.35rem 0.35rem',
           borderRadius: '9999px',
-          border: '1px solid var(--border-subtle)',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.03)'
+          border: '1px solid var(--border-subtle)'
         }}>
           <div style={{
             width: '32px',

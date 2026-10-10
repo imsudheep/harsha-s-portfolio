@@ -340,24 +340,24 @@ button {
   color: #9F1239 !important;
 }
 
-/* Dark mode identical cards */
+/* Dark mode solid matte cards */
 [data-theme="dark"] .card-service-amber {
-  background-color: rgba(245, 158, 11, 0.12) !important;
-  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+  background-color: #2D2314 !important;
+  border: 1px solid #78350F !important;
   color: #FBBF24 !important;
 }
 [data-theme="dark"] .card-service-amber * { color: #FBBF24 !important; }
 
 [data-theme="dark"] .card-service-blue {
-  background-color: rgba(37, 99, 235, 0.12) !important;
-  border: 1px solid rgba(37, 99, 235, 0.3) !important;
+  background-color: #152238 !important;
+  border: 1px solid #1E3A8A !important;
   color: #60A5FA !important;
 }
 [data-theme="dark"] .card-service-blue * { color: #60A5FA !important; }
 
 [data-theme="dark"] .card-service-coral {
-  background-color: rgba(225, 29, 72, 0.12) !important;
-  border: 1px solid rgba(225, 29, 72, 0.3) !important;
+  background-color: #2B151A !important;
+  border: 1px solid #881337 !important;
   color: #FB7185 !important;
 }
 [data-theme="dark"] .card-service-coral * { color: #FB7185 !important; }
@@ -386,11 +386,11 @@ button {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--border-medium); border-radius: 3px; }
 
-/* Modal Overlay - Clean Dark Overlay (No Heavy Blur) */
+/* Modal Overlay - Clean Flat Solid Matte Overlay */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(15, 23, 42, 0.6);
+  background-color: #0D0E11;
   z-index: 50;
   display: flex;
   align-items: center;

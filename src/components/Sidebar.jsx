@@ -99,8 +99,8 @@ export const Sidebar = ({ onQuickNew }) => {
             onClick={() => setShowWhitePanel(!showWhitePanel)}
             className={`rail-icon-btn ${showWhitePanel ? 'rail-icon-btn-active' : ''}`}
             style={{
-              backgroundColor: showWhitePanel ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.12)',
-              border: '1px solid rgba(255, 255, 255, 0.25)',
+              backgroundColor: showWhitePanel ? '#3B82F6' : '#1D4ED8',
+              border: '1px solid #60A5FA',
               marginBottom: '1rem'
             }}
           >

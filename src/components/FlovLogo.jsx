@@ -1,8 +1,8 @@
 import React from 'react';
 
 /**
- * Official FLOW Brand Logo & Icon Component
- * Based on FLOW brand guidelines: Dual diagonal flowing leaf/workspace marks representing Flow + Workspace + Progress.
+ * Official FLOV Geometric Brand Logo & Icon Component
+ * Based on FLOV brand guidelines: Left vertical angled pillar + right upper wedge triangle forming the geometric FLOV mark.
  */
 export const FlovLogoIcon = ({ size = 32, color = 'currentColor', style = {} }) => {
   return (
@@ -14,14 +14,14 @@ export const FlovLogoIcon = ({ size = 32, color = 'currentColor', style = {} }) 
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: 'block', ...style }}
     >
-      {/* Lower-left diagonal flow mark */}
-      <path
-        d="M 16 76 C 13 60 24 45 48 44 C 49 60 38 75 16 76 Z"
+      {/* Left Pillar with 45-degree angled top */}
+      <polygon
+        points="18,80 18,46 42,26 42,80"
         fill={color}
       />
-      {/* Upper-right diagonal flow mark */}
-      <path
-        d="M 52 40 C 49 24 60 9 84 8 C 85 24 74 39 52 40 Z"
+      {/* Right Upper Wedge Triangle */}
+      <polygon
+        points="50,26 76,26 50,52"
         fill={color}
       />
     </svg>
@@ -51,10 +51,10 @@ export const FlovAppIcon = ({ size = 40, bg = '#FFFFFF', iconColor = '#0F172A', 
 
 export const FlovWordmark = ({ height = 26, color = 'currentColor', style = {} }) => {
   return (
-    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.65rem', height: `${height}px`, ...style }}>
-      {/* Dual Flow Marks */}
+    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', height: `${height}px`, ...style }}>
+      {/* Geometric FLOV Monogram */}
       <FlovLogoIcon size={height} color={color} />
-      {/* Geometric 'FLOW' Uppercase Wordmark */}
+      {/* Geometric 'FLOV' Uppercase Wordmark */}
       <span style={{ 
         fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif", 
         fontWeight: 700, 
@@ -64,7 +64,7 @@ export const FlovWordmark = ({ height = 26, color = 'currentColor', style = {} }
         color: color,
         textTransform: 'uppercase'
       }}>
-        FLOW
+        FLOV
       </span>
     </div>
   );

@@ -312,90 +312,80 @@ button {
   border-color: var(--border-medium);
 }
 
-/* Color-Coded Service Cards — Solid Brand Color Background with Crisp High-Contrast White Text */
+/* Reduced Color Shades — Calm, Minimal, Restrained Card Surfaces */
 .card-service-amber {
-  background-color: #F79009 !important;
-  border: 1px solid #D97706 !important;
-  color: #FFFFFF !important;
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
 }
 .card-service-amber * {
-  color: #FFFFFF !important;
+  color: var(--text-primary);
+}
+.card-service-amber .service-tag {
+  color: #D97706 !important;
 }
 .card-service-amber button {
-  background-color: #0F172A !important;
-  color: #FFFFFF !important;
-  border: none !important;
+  background-color: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-subtle) !important;
 }
 
 .card-service-blue {
-  background-color: #3382F9 !important;
-  border: 1px solid #2563EB !important;
-  color: #FFFFFF !important;
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
 }
 .card-service-blue * {
-  color: #FFFFFF !important;
+  color: var(--text-primary);
+}
+.card-service-blue .service-tag {
+  color: #2563EB !important;
 }
 .card-service-blue button {
-  background-color: #0F172A !important;
-  color: #FFFFFF !important;
-  border: none !important;
+  background-color: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-subtle) !important;
 }
 
 .card-service-coral, .card-service-green {
-  background-color: #15803D !important;
-  border: 1px solid #166534 !important;
-  color: #FFFFFF !important;
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
 }
 .card-service-coral *, .card-service-green * {
-  color: #FFFFFF !important;
+  color: var(--text-primary);
+}
+.card-service-coral .service-tag, .card-service-green .service-tag {
+  color: #059669 !important;
 }
 .card-service-coral button, .card-service-green button {
-  background-color: #0F172A !important;
-  color: #FFFFFF !important;
-  border: none !important;
+  background-color: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-subtle) !important;
 }
 
-/* Dark mode: Vibrant Solid Brand Color Surfaces with Crisp High-Contrast Text */
-[data-theme="dark"] .card-service-amber {
-  background-color: #F79009 !important;
-  border: 1px solid #EA580C !important;
-  color: #0F172A !important;
+/* Dark mode restrained card surfaces */
+[data-theme="dark"] .card-service-amber,
+[data-theme="dark"] .card-service-blue,
+[data-theme="dark"] .card-service-coral,
+[data-theme="dark"] .card-service-green {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-primary) !important;
 }
-[data-theme="dark"] .card-service-amber * {
-  color: #0F172A !important;
+[data-theme="dark"] .card-service-amber *,
+[data-theme="dark"] .card-service-blue *,
+[data-theme="dark"] .card-service-coral *,
+[data-theme="dark"] .card-service-green * {
+  color: var(--text-primary);
 }
-[data-theme="dark"] .card-service-amber button {
-  background-color: #0F172A !important;
-  color: #FFFFFF !important;
-  border: none !important;
-}
-
-[data-theme="dark"] .card-service-blue {
-  background-color: #3382F9 !important;
-  border: 1px solid #2563EB !important;
-  color: #FFFFFF !important;
-}
-[data-theme="dark"] .card-service-blue * {
-  color: #FFFFFF !important;
-}
-[data-theme="dark"] .card-service-blue button {
-  background-color: #0F172A !important;
-  color: #FFFFFF !important;
-  border: none !important;
-}
-
-[data-theme="dark"] .card-service-coral, [data-theme="dark"] .card-service-green {
-  background-color: #16A34A !important;
-  border: 1px solid #15803D !important;
-  color: #FFFFFF !important;
-}
-[data-theme="dark"] .card-service-coral *, [data-theme="dark"] .card-service-green * {
-  color: #FFFFFF !important;
-}
-[data-theme="dark"] .card-service-coral button, [data-theme="dark"] .card-service-green button {
-  background-color: #0F172A !important;
-  color: #FFFFFF !important;
-  border: none !important;
+[data-theme="dark"] .card-service-amber button,
+[data-theme="dark"] .card-service-blue button,
+[data-theme="dark"] .card-service-coral button,
+[data-theme="dark"] .card-service-green button {
+  background-color: var(--bg-elevated) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-subtle) !important;
 }
 
 /* Badges */

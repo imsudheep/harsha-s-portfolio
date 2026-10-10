@@ -4,7 +4,7 @@
 :root {
   --bg-main: #F8FAFC;
   --bg-sidebar: #1E40AF; /* Primary Royal Blue Task Bar */
-  --bg-sidebar-nav: #FFFFFF; /* Optional White Workspace Task Bar */
+  --bg-sidebar-nav: #FFFFFF;
   --bg-card: #FFFFFF;
   --bg-card-hover: #F1F5F9;
   --bg-elevated: #F1F5F9;
@@ -18,35 +18,35 @@
   --text-secondary: #334155;
   --text-muted: #64748B;
 
-  /* Formal Non-Vivid Palette */
-  --accent-blue: #2563EB;
-  --accent-amber: #D97706;
+  /* Reference Palette Accents */
+  --accent-blue: #3382F9; /* Bleu de France */
+  --accent-amber: #F79009; /* Rich Orange */
+  --accent-emerald: #6DC786; /* Rare Green */
   --accent-coral: #E11D48;
-  --accent-emerald: #059669;
 
-  /* Status Badges - Soft Muted Tints */
+  /* Status Badges */
   --status-working-bg: #EFF6FF;
-  --status-working-text: #1E40AF;
+  --status-working-text: #3382F9;
   --status-working-border: #BFDBFE;
 
   --status-queue-bg: #F0F9FF;
-  --status-queue-text: #0369A1;
+  --status-queue-text: #0284C7;
   --status-queue-border: #BAE6FD;
 
-  --status-revision-bg: #FEF3C7;
-  --status-revision-text: #92400E;
-  --status-revision-border: #FDE68A;
+  --status-revision-bg: #FFF7ED;
+  --status-revision-text: #F79009;
+  --status-revision-border: #FFEDD5;
 
-  --status-completed-bg: #ECFDF5;
-  --status-completed-text: #047857;
-  --status-completed-border: #A7F3D0;
+  --status-completed-bg: #F0FDF4;
+  --status-completed-text: #15803D;
+  --status-completed-border: #BBF7D0;
 
   --status-blocked-bg: #FFE4E6;
-  --status-blocked-text: #9F1239;
+  --status-blocked-text: #E11D48;
   --status-blocked-border: #FECDD3;
 
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-display: 'Plus Jakarta Sans', var(--font-sans);
+  --font-display: 'Inter', var(--font-sans);
   --font-mono: 'JetBrains Mono', monospace;
   
   --radius-sm: 6px;
@@ -55,7 +55,7 @@
 }
 
 [data-theme="dark"] {
-  --bg-main: #0D0E11; /* Deep Warm Ergonomic Dark Background (Anti-Glare) */
+  --bg-main: #0D0E11; /* Deep Warm Charcoal Dark Background */
   --bg-sidebar: #15161A; /* Solid Dark Charcoal Bar */
   --bg-sidebar-nav: #15161A; /* Solid Dark Charcoal Navigation Panel */
   --bg-card: #15161A; /* Solid Dark Charcoal Card Surface */
@@ -71,26 +71,26 @@
   --text-secondary: #A0A4B0; /* Calm Muted Slate */
   --text-muted: #6E7280; /* Soft Secondary Label */
 
-  /* Ergonomic Color Psychology for Status Badges & Indicators */
-  --status-working-bg: rgba(59, 130, 246, 0.14);
-  --status-working-text: #60A5FA;
-  --status-working-border: rgba(96, 165, 250, 0.28);
+  /* Status Badges - Bleu de France (#3382F9), Rich Orange (#F79009), Rare Green (#6DC786) */
+  --status-working-bg: #152238;
+  --status-working-text: #3382F9;
+  --status-working-border: #1E3A8A;
 
-  --status-queue-bg: rgba(14, 165, 233, 0.14);
+  --status-queue-bg: #102838;
   --status-queue-text: #38BDF8;
-  --status-queue-border: rgba(56, 189, 248, 0.28);
+  --status-queue-border: #075985;
 
-  --status-revision-bg: rgba(245, 158, 11, 0.14);
-  --status-revision-text: #FBBF24;
-  --status-revision-border: rgba(251, 191, 36, 0.28);
+  --status-revision-bg: #2D2314;
+  --status-revision-text: #F79009;
+  --status-revision-border: #78350F;
 
-  --status-completed-bg: rgba(16, 185, 129, 0.14);
-  --status-completed-text: #34D399;
-  --status-completed-border: rgba(52, 211, 153, 0.28);
+  --status-completed-bg: #12271E;
+  --status-completed-text: #6DC786;
+  --status-completed-border: #065F46;
 
-  --status-blocked-bg: rgba(244, 63, 94, 0.14);
+  --status-blocked-bg: #2B151A;
   --status-blocked-text: #FB7185;
-  --status-blocked-border: rgba(251, 113, 133, 0.28);
+  --status-blocked-border: #881337;
 }
 
 * {
@@ -312,55 +312,61 @@ button {
   border-color: var(--border-medium);
 }
 
-/* Identical Non-Vibrant Soft Category Cards */
+/* Color-Coded Service Cards — Single Color Monochrome Text Rule */
 .card-service-amber {
-  background-color: #FEF3C7 !important;
-  border: 1px solid #FDE68A !important;
-  color: #92400E !important;
+  background-color: #FFF7ED !important;
+  border: 1px solid #FFEDD5 !important;
+  color: #C2410C !important;
 }
 .card-service-amber * {
-  color: #92400E !important;
+  color: #C2410C !important;
 }
 
 .card-service-blue {
   background-color: #EFF6FF !important;
   border: 1px solid #BFDBFE !important;
-  color: #1E40AF !important;
+  color: #1D4ED8 !important;
 }
 .card-service-blue * {
-  color: #1E40AF !important;
+  color: #1D4ED8 !important;
 }
 
-.card-service-coral {
-  background-color: #FFE4E6 !important;
-  border: 1px solid #FECDD3 !important;
-  color: #9F1239 !important;
+.card-service-coral, .card-service-green {
+  background-color: #F0FDF4 !important;
+  border: 1px solid #BBF7D0 !important;
+  color: #15803D !important;
 }
-.card-service-coral * {
-  color: #9F1239 !important;
+.card-service-coral *, .card-service-green * {
+  color: #15803D !important;
 }
 
-/* Dark mode solid matte cards */
+/* Dark mode single monochrome color cards */
 [data-theme="dark"] .card-service-amber {
   background-color: #2D2314 !important;
   border: 1px solid #78350F !important;
-  color: #FBBF24 !important;
+  color: #F79009 !important;
 }
-[data-theme="dark"] .card-service-amber * { color: #FBBF24 !important; }
+[data-theme="dark"] .card-service-amber * {
+  color: #F79009 !important;
+}
 
 [data-theme="dark"] .card-service-blue {
   background-color: #152238 !important;
   border: 1px solid #1E3A8A !important;
-  color: #60A5FA !important;
+  color: #3382F9 !important;
 }
-[data-theme="dark"] .card-service-blue * { color: #60A5FA !important; }
+[data-theme="dark"] .card-service-blue * {
+  color: #3382F9 !important;
+}
 
-[data-theme="dark"] .card-service-coral {
-  background-color: #2B151A !important;
-  border: 1px solid #881337 !important;
-  color: #FB7185 !important;
+[data-theme="dark"] .card-service-coral, [data-theme="dark"] .card-service-green {
+  background-color: #12271E !important;
+  border: 1px solid #065F46 !important;
+  color: #6DC786 !important;
 }
-[data-theme="dark"] .card-service-coral * { color: #FB7185 !important; }
+[data-theme="dark"] .card-service-coral *, [data-theme="dark"] .card-service-green * {
+  color: #6DC786 !important;
+}
 
 /* Badges */
 .badge {

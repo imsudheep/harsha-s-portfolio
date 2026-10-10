@@ -55,41 +55,42 @@
 }
 
 [data-theme="dark"] {
-  --bg-main: #09090B; /* Pure Neutral Pitch Black Main Background */
-  --bg-sidebar: #121215; /* Pitch Dark Charcoal Task Bar */
-  --bg-sidebar-nav: #121215; /* Pitch Dark Charcoal Navigation Panel */
-  --bg-card: #121215; /* Pitch Dark Charcoal Card */
-  --bg-card-hover: #1A1A1E; /* Neutral Hover */
-  --bg-elevated: #1E1E24; /* Neutral Elevated */
-  --bg-input: #151519; /* Pitch Dark Input */
+  --bg-main: #0D0E11; /* Deep Warm Ergonomic Dark Background (Anti-Glare) */
+  --bg-sidebar: #15161A; /* Solid Dark Charcoal Bar */
+  --bg-sidebar-nav: #15161A; /* Solid Dark Charcoal Navigation Panel */
+  --bg-card: #15161A; /* Solid Dark Charcoal Card Surface */
+  --bg-card-hover: #1E2025; /* Soft Tactile Hover */
+  --bg-elevated: #24262C; /* Solid Dark Charcoal Elevated Container */
+  --bg-input: #121316; /* Solid Deep Recessed Input Field */
   
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-medium: rgba(255, 255, 255, 0.16);
-  --border-active: rgba(255, 255, 255, 0.28);
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-medium: rgba(255, 255, 255, 0.18);
+  --border-active: rgba(255, 255, 255, 0.32);
   
-  --text-primary: #FAFAFA;
-  --text-secondary: #A1A1AA;
-  --text-muted: #71717A;
+  --text-primary: #F0F1F5; /* Warm Soft Off-White (Eye-Comfort, No Glare) */
+  --text-secondary: #A0A4B0; /* Calm Muted Slate */
+  --text-muted: #6E7280; /* Soft Secondary Label */
 
-  --status-working-bg: rgba(37, 99, 235, 0.15);
+  /* Ergonomic Color Psychology for Status Badges & Indicators */
+  --status-working-bg: rgba(59, 130, 246, 0.14);
   --status-working-text: #60A5FA;
-  --status-working-border: rgba(37, 99, 235, 0.3);
+  --status-working-border: rgba(96, 165, 250, 0.28);
 
-  --status-queue-bg: rgba(3, 105, 161, 0.15);
+  --status-queue-bg: rgba(14, 165, 233, 0.14);
   --status-queue-text: #38BDF8;
-  --status-queue-border: rgba(3, 105, 161, 0.3);
+  --status-queue-border: rgba(56, 189, 248, 0.28);
 
-  --status-revision-bg: rgba(217, 119, 6, 0.15);
+  --status-revision-bg: rgba(245, 158, 11, 0.14);
   --status-revision-text: #FBBF24;
-  --status-revision-border: rgba(217, 119, 6, 0.3);
+  --status-revision-border: rgba(251, 191, 36, 0.28);
 
-  --status-completed-bg: rgba(5, 150, 105, 0.15);
+  --status-completed-bg: rgba(16, 185, 129, 0.14);
   --status-completed-text: #34D399;
-  --status-completed-border: rgba(5, 150, 105, 0.3);
+  --status-completed-border: rgba(52, 211, 153, 0.28);
 
-  --status-blocked-bg: rgba(225, 29, 72, 0.15);
+  --status-blocked-bg: rgba(244, 63, 94, 0.14);
   --status-blocked-text: #FB7185;
-  --status-blocked-border: rgba(225, 29, 72, 0.3);
+  --status-blocked-border: rgba(251, 113, 133, 0.28);
 }
 
 * {
@@ -483,7 +484,7 @@ button {
   color: var(--bg-main) !important;
 }
 
-/* Floating Bottom Capsule Navigation Bar (Matching Reference Mockup Bottom Bar) */
+/* Floating Bottom Capsule Navigation Bar (Solid Ergonomic Surface — No Glass Blur) */
 .floating-capsule-bar {
   position: fixed;
   bottom: 1.15rem;
@@ -494,9 +495,7 @@ button {
   margin-left: auto;
   margin-right: auto;
   height: 60px;
-  background-color: rgba(15, 23, 42, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: #0F172A;
   border-radius: 9999px;
   padding: 0 0.5rem;
   display: flex;
@@ -509,7 +508,7 @@ button {
 }
 
 [data-theme="dark"] .floating-capsule-bar {
-  background-color: rgba(18, 18, 21, 0.94);
+  background-color: #15161A;
   border-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
 }
@@ -651,8 +650,7 @@ button {
   /* Placement: Show Mobile Top Bar & Bottom Tab Bar */
   .mobile-header {
     display: flex !important;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: var(--bg-card) !important;
   }
 
   .mobile-bottom-bar {

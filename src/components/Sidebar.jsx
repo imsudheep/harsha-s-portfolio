@@ -141,6 +141,13 @@ export const Sidebar = ({ onQuickNew }) => {
         {/* Rail Bottom Settings & Theme */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem' }}>
           <button 
+            title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
+            onClick={toggleTheme}
+            className="rail-icon-btn"
+          >
+            {theme === 'dark' ? <Sun size={20} style={{ color: '#FBBF24' }} /> : <Moon size={20} style={{ color: '#FFFFFF' }} />}
+          </button>
+          <button 
             title="Profile & Brand Settings"
             onClick={() => setActiveView('PROFILE_BRAND')}
             className={`rail-icon-btn ${activeView === 'PROFILE_BRAND' ? 'rail-icon-btn-active' : ''}`}

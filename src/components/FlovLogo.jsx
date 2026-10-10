@@ -1,8 +1,11 @@
 import React from 'react';
 
 /**
- * Official FLOV Geometric Brand Logo & Icon Component
- * Based on FLOV brand guidelines: Left vertical angled pillar + right upper wedge triangle forming the geometric FLOV mark.
+ * Official FLOV Brand Logo & Icon Component
+ * Exact Geometric Geometry from Brand Spec:
+ * - Left shape: 45° vertical parallelogram column.
+ * - Right shape: Right-angled triangle aligned with the 45° diagonal top.
+ * - Wordmark: Geometric 'FLOV' uppercase with wide tracking.
  */
 export const FlovLogoIcon = ({ size = 32, color = 'currentColor', style = {} }) => {
   return (
@@ -14,14 +17,14 @@ export const FlovLogoIcon = ({ size = 32, color = 'currentColor', style = {} }) 
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: 'block', ...style }}
     >
-      {/* Left Pillar with 45-degree angled top */}
+      {/* Left 45° Parallelogram Pillar */}
       <polygon
-        points="18,80 18,46 42,26 42,80"
+        points="20,80 20,44 44,20 44,56"
         fill={color}
       />
-      {/* Right Upper Wedge Triangle */}
+      {/* Right Triangular Wedge */}
       <polygon
-        points="50,26 76,26 50,52"
+        points="52,20 76,20 52,44"
         fill={color}
       />
     </svg>
@@ -52,9 +55,9 @@ export const FlovAppIcon = ({ size = 40, bg = '#FFFFFF', iconColor = '#0F172A', 
 export const FlovWordmark = ({ height = 26, color = 'currentColor', style = {} }) => {
   return (
     <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', height: `${height}px`, ...style }}>
-      {/* Geometric FLOV Monogram */}
+      {/* Exact FLOV Monogram */}
       <FlovLogoIcon size={height} color={color} />
-      {/* Geometric 'FLOV' Uppercase Wordmark */}
+      {/* Geometric 'FLOV' Wordmark */}
       <span style={{ 
         fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, sans-serif", 
         fontWeight: 700, 

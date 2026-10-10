@@ -63,9 +63,9 @@
   --bg-elevated: #24262C; /* Solid Dark Charcoal Elevated Container */
   --bg-input: #121316; /* Solid Deep Recessed Input Field */
   
-  --border-subtle: rgba(255, 255, 255, 0.09);
-  --border-medium: rgba(255, 255, 255, 0.18);
-  --border-active: rgba(255, 255, 255, 0.32);
+  --border-subtle: #242730;
+  --border-medium: #343846;
+  --border-active: #4E5366;
   
   --text-primary: #F0F1F5; /* Warm Soft Off-White (Eye-Comfort, No Glare) */
   --text-secondary: #A0A4B0; /* Calm Muted Slate */
@@ -141,19 +141,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.75);
+  color: #A0A4B0;
   cursor: pointer;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .rail-icon-btn:hover {
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: #263554;
 }
 
 .rail-icon-btn-active {
   color: #FFFFFF !important;
-  background-color: rgba(255, 255, 255, 0.22) !important;
+  background-color: #3382F9 !important;
 }
 
 /* Optional White Navigation Task Bar Panel */
@@ -312,10 +312,10 @@ button {
   border-color: var(--border-medium);
 }
 
-/* Color-Coded Service Cards — Single Color Monochrome Accent Rule with Standard Surface */
+/* Color-Coded Service Cards — Single Color Monochrome Accent Rule with 100% Opaque Solid Surfaces */
 .card-service-amber {
   background-color: var(--bg-card) !important;
-  border: 1px solid rgba(247, 144, 9, 0.35) !important;
+  border: 1px solid #F59E0B !important;
   color: #C2410C !important;
 }
 .card-service-amber * {
@@ -324,7 +324,7 @@ button {
 
 .card-service-blue {
   background-color: var(--bg-card) !important;
-  border: 1px solid rgba(51, 130, 249, 0.35) !important;
+  border: 1px solid #3B82F6 !important;
   color: #1D4ED8 !important;
 }
 .card-service-blue * {
@@ -333,7 +333,7 @@ button {
 
 .card-service-coral, .card-service-green {
   background-color: var(--bg-card) !important;
-  border: 1px solid rgba(109, 199, 134, 0.35) !important;
+  border: 1px solid #10B981 !important;
   color: #15803D !important;
 }
 .card-service-coral *, .card-service-green * {
@@ -343,7 +343,7 @@ button {
 /* Dark mode single monochrome color cards with standard dark charcoal surface */
 [data-theme="dark"] .card-service-amber {
   background-color: var(--bg-card) !important;
-  border: 1px solid rgba(247, 144, 9, 0.4) !important;
+  border: 1px solid #78350F !important;
   color: #F79009 !important;
 }
 [data-theme="dark"] .card-service-amber * {
@@ -352,7 +352,7 @@ button {
 
 [data-theme="dark"] .card-service-blue {
   background-color: var(--bg-card) !important;
-  border: 1px solid rgba(51, 130, 249, 0.4) !important;
+  border: 1px solid #1E3A8A !important;
   color: #3382F9 !important;
 }
 [data-theme="dark"] .card-service-blue * {
@@ -361,7 +361,7 @@ button {
 
 [data-theme="dark"] .card-service-coral, [data-theme="dark"] .card-service-green {
   background-color: var(--bg-card) !important;
-  border: 1px solid rgba(109, 199, 134, 0.4) !important;
+  border: 1px solid #065F46 !important;
   color: #6DC786 !important;
 }
 [data-theme="dark"] .card-service-coral *, [data-theme="dark"] .card-service-green * {
@@ -508,15 +508,15 @@ button {
   align-items: center;
   justify-content: space-around;
   z-index: 100;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
+  border: 1px solid #242730;
   box-sizing: border-box;
 }
 
 [data-theme="dark"] .floating-capsule-bar {
   background-color: #15161A;
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+  border-color: #343846;
+  box-shadow: none;
 }
 
 .desktop-only-section {
@@ -534,7 +534,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.6);
+  color: #A0A4B0;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -543,13 +543,12 @@ button {
 
 .floating-capsule-item:hover {
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: #242730;
 }
 
 .floating-capsule-active {
-  color: #0F172A !important;
-  background-color: #FFFFFF !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: #FFFFFF !important;
+  background-color: #3382F9 !important;
 }
 
 /* Responsive Split Grid Helper */

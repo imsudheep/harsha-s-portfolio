@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
+import { FlovAppIcon, FlovWordmark } from './FlovLogo';
 import { 
   Home, 
   FolderKanban, 
@@ -77,20 +78,8 @@ export const Sidebar = ({ onQuickNew }) => {
          ================================================== */}
       <div className="rail-sidebar">
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem' }}>
-          <div style={{
-            width: '40px',
-            height: '40px',
-            borderRadius: '12px',
-            backgroundColor: '#FFFFFF',
-            color: '#1D4ED8',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontWeight: '900',
-            fontSize: '1.15rem',
-            marginBottom: '0.25rem'
-          }}>
-            F
+          <div style={{ marginBottom: '0.25rem' }}>
+            <FlovAppIcon size={40} bg="#FFFFFF" iconColor="#1D4ED8" />
           </div>
 
           {/* Option in Blue Task Bar to Toggle/Access White Task Bar */}
@@ -170,10 +159,10 @@ export const Sidebar = ({ onQuickNew }) => {
             {/* Brand Title */}
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', padding: '0 0.25rem' }}>
               <div>
-                <div style={{ fontFamily: 'var(--font-display)', fontWeight: '800', fontSize: '1.2rem', letterSpacing: '-0.02em', lineHeight: 1 }}>
-                  FLOV
+                <div style={{ display: 'flex', alignItems: 'center', height: '26px' }}>
+                  <FlovWordmark height={22} color="var(--text-primary)" />
                 </div>
-                <div style={{ fontSize: '0.625rem', color: 'var(--text-muted)', fontWeight: '600', letterSpacing: '0.06em', textTransform: 'uppercase', marginTop: '0.2rem' }}>
+                <div style={{ fontSize: '0.625rem', color: 'var(--text-muted)', fontWeight: '600', letterSpacing: '0.06em', textTransform: 'uppercase', marginTop: '0.25rem' }}>
                   DIGITAL OFFICE
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
+import { FlovAppIcon, FlovWordmark } from './FlovLogo';
 import { 
   Home, 
   FolderKanban, 
@@ -48,23 +49,10 @@ export const MobileNav = ({ onQuickNew }) => {
           onClick={() => setActiveView('HOME')}
           style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', cursor: 'pointer' }}
         >
-          <div style={{
-            width: '30px',
-            height: '30px',
-            backgroundColor: 'var(--accent-blue)',
-            color: '#FFFFFF',
-            borderRadius: '8px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontWeight: '800',
-            fontSize: '0.9rem'
-          }}>
-            F
-          </div>
-          <div>
-            <div style={{ fontWeight: '800', letterSpacing: '-0.01em', fontSize: '0.9rem', lineHeight: 1 }}>FLOV</div>
-            <div style={{ fontSize: '0.575rem', color: 'var(--text-muted)', fontWeight: '600', letterSpacing: '0.05em' }}>DIGITAL OFFICE</div>
+          <FlovAppIcon size={30} bg="var(--accent-blue)" iconColor="#FFFFFF" />
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <FlovWordmark height={18} color="var(--text-primary)" />
+            <div style={{ fontSize: '0.55rem', color: 'var(--text-muted)', fontWeight: '600', letterSpacing: '0.05em', marginTop: '0.15rem' }}>DIGITAL OFFICE</div>
           </div>
         </div>
 

@@ -312,10 +312,10 @@ button {
   border-color: var(--border-medium);
 }
 
-/* Color-Coded Service Cards — Single Color Monochrome Text Rule */
+/* Color-Coded Service Cards — Single Color Monochrome Accent Rule with Standard Surface */
 .card-service-amber {
-  background-color: #FFF7ED !important;
-  border: 1px solid #FFEDD5 !important;
+  background-color: var(--bg-card) !important;
+  border: 1px solid rgba(247, 144, 9, 0.35) !important;
   color: #C2410C !important;
 }
 .card-service-amber * {
@@ -323,8 +323,8 @@ button {
 }
 
 .card-service-blue {
-  background-color: #EFF6FF !important;
-  border: 1px solid #BFDBFE !important;
+  background-color: var(--bg-card) !important;
+  border: 1px solid rgba(51, 130, 249, 0.35) !important;
   color: #1D4ED8 !important;
 }
 .card-service-blue * {
@@ -332,18 +332,18 @@ button {
 }
 
 .card-service-coral, .card-service-green {
-  background-color: #F0FDF4 !important;
-  border: 1px solid #BBF7D0 !important;
+  background-color: var(--bg-card) !important;
+  border: 1px solid rgba(109, 199, 134, 0.35) !important;
   color: #15803D !important;
 }
 .card-service-coral *, .card-service-green * {
   color: #15803D !important;
 }
 
-/* Dark mode single monochrome color cards */
+/* Dark mode single monochrome color cards with standard dark charcoal surface */
 [data-theme="dark"] .card-service-amber {
-  background-color: #2D2314 !important;
-  border: 1px solid #78350F !important;
+  background-color: var(--bg-card) !important;
+  border: 1px solid rgba(247, 144, 9, 0.4) !important;
   color: #F79009 !important;
 }
 [data-theme="dark"] .card-service-amber * {
@@ -351,8 +351,8 @@ button {
 }
 
 [data-theme="dark"] .card-service-blue {
-  background-color: #152238 !important;
-  border: 1px solid #1E3A8A !important;
+  background-color: var(--bg-card) !important;
+  border: 1px solid rgba(51, 130, 249, 0.4) !important;
   color: #3382F9 !important;
 }
 [data-theme="dark"] .card-service-blue * {
@@ -360,8 +360,8 @@ button {
 }
 
 [data-theme="dark"] .card-service-coral, [data-theme="dark"] .card-service-green {
-  background-color: #12271E !important;
-  border: 1px solid #065F46 !important;
+  background-color: var(--bg-card) !important;
+  border: 1px solid rgba(109, 199, 134, 0.4) !important;
   color: #6DC786 !important;
 }
 [data-theme="dark"] .card-service-coral *, [data-theme="dark"] .card-service-green * {

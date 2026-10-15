@@ -1,24 +1,25 @@
-/* FLOV — Professional Formal Digital Office Design System */
-/* Clean, flat, subtle aesthetics — No glowing effects, no vibrant gradients */
+/* FLOV — Professional Digital Workspace Design System */
+/* Based on official brand guidelines: Electric Lime (#DFFF3A), Matte Black (#0F0F0F), Warm Surface (#FAFAF7), Neutral (#D9D6CF) */
 
 :root {
-  --bg-main: #F8FAFC;
-  --bg-sidebar: #1E40AF; /* Primary Royal Blue Task Bar */
+  --bg-main: #FAFAF7;
+  --bg-sidebar: #0F0F0F; /* Solid Matte Black Left Task Bar */
   --bg-sidebar-nav: #FFFFFF;
   --bg-card: #FFFFFF;
-  --bg-card-hover: #F1F5F9;
-  --bg-elevated: #F1F5F9;
+  --bg-card-hover: #F4F3EE;
+  --bg-elevated: #F2EFE9;
   --bg-input: #FFFFFF;
   
-  --border-subtle: #E2E8F0;
-  --border-medium: #CBD5E1;
-  --border-active: #94A3B8;
+  --border-subtle: #E8E5DD;
+  --border-medium: #D9D6CF;
+  --border-active: #B5B2AA;
   
-  --text-primary: #0F172A;
-  --text-secondary: #334155;
-  --text-muted: #64748B;
+  --text-primary: #0F0F0F;
+  --text-secondary: #525049;
+  --text-muted: #7C7971;
 
-  /* Reference Palette Accents */
+  /* Official Brand Colors */
+  --accent-primary: #DFFF3A; /* Electric Lime */
   --accent-blue: #3382F9; /* Bleu de France */
   --accent-amber: #F79009; /* Rich Orange */
   --accent-emerald: #6DC786; /* Rare Green */
@@ -26,22 +27,22 @@
 
   /* Status Badges */
   --status-working-bg: #EFF6FF;
-  --status-working-text: #3382F9;
+  --status-working-text: #2563EB;
   --status-working-border: #BFDBFE;
 
   --status-queue-bg: #F0F9FF;
   --status-queue-text: #0284C7;
   --status-queue-border: #BAE6FD;
 
-  --status-revision-bg: #FFF7ED;
-  --status-revision-text: #F79009;
-  --status-revision-border: #FFEDD5;
+  --status-revision-bg: #FFFBEB;
+  --status-revision-text: #D97706;
+  --status-revision-border: #FDE68A;
 
   --status-completed-bg: #F0FDF4;
-  --status-completed-text: #15803D;
+  --status-completed-text: #16A34A;
   --status-completed-border: #BBF7D0;
 
-  --status-blocked-bg: #FFE4E6;
+  --status-blocked-bg: #FFF1F2;
   --status-blocked-text: #E11D48;
   --status-blocked-border: #FECDD3;
 
@@ -55,25 +56,27 @@
 }
 
 [data-theme="dark"] {
-  --bg-main: #0D0E11; /* Deep Warm Charcoal Dark Background */
-  --bg-sidebar: #15161A; /* Solid Dark Charcoal Bar */
-  --bg-sidebar-nav: #15161A; /* Solid Dark Charcoal Navigation Panel */
-  --bg-card: #15161A; /* Solid Dark Charcoal Card Surface */
-  --bg-card-hover: #1E2025; /* Soft Tactile Hover */
-  --bg-elevated: #24262C; /* Solid Dark Charcoal Elevated Container */
-  --bg-input: #121316; /* Solid Deep Recessed Input Field */
+  --bg-main: #0F0F0F; /* Matte Black Background */
+  --bg-sidebar: #171717; /* Solid Dark Task Bar */
+  --bg-sidebar-nav: #171717;
+  --bg-card: #181818; /* Solid Matte Dark Card Surface */
+  --bg-card-hover: #222222;
+  --bg-elevated: #242424;
+  --bg-input: #121212;
   
-  --border-subtle: #242730;
-  --border-medium: #343846;
-  --border-active: #4E5366;
+  --border-subtle: #262626;
+  --border-medium: #383838;
+  --border-active: #525252;
   
-  --text-primary: #F0F1F5; /* Warm Soft Off-White (Eye-Comfort, No Glare) */
-  --text-secondary: #A0A4B0; /* Calm Muted Slate */
-  --text-muted: #6E7280; /* Soft Secondary Label */
+  --text-primary: #FAFAF7; /* Warm Off-White */
+  --text-secondary: #D9D6CF; /* Muted Neutral Gray */
+  --text-muted: #888880;
 
-  /* Status Badges - Bleu de France (#3382F9), Rich Orange (#F79009), Rare Green (#6DC786) */
+  --accent-primary: #DFFF3A;
+
+  /* Status Badges */
   --status-working-bg: #152238;
-  --status-working-text: #3382F9;
+  --status-working-text: #60A5FA;
   --status-working-border: #1E3A8A;
 
   --status-queue-bg: #102838;
@@ -81,11 +84,11 @@
   --status-queue-border: #075985;
 
   --status-revision-bg: #2D2314;
-  --status-revision-text: #F79009;
+  --status-revision-text: #FBBF24;
   --status-revision-border: #78350F;
 
   --status-completed-bg: #12271E;
-  --status-completed-text: #6DC786;
+  --status-completed-text: #4ADE80;
   --status-completed-border: #065F46;
 
   --status-blocked-bg: #2B151A;
@@ -141,19 +144,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #A0A4B0;
+  color: #888880;
   cursor: pointer;
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .rail-icon-btn:hover {
-  color: #FFFFFF;
-  background-color: #263554;
+  color: #FAFAF7;
+  background-color: #262626;
 }
 
 .rail-icon-btn-active {
-  color: #FFFFFF !important;
-  background-color: #3382F9 !important;
+  color: #0F0F0F !important;
+  background-color: var(--accent-primary) !important;
 }
 
 /* Optional White Navigation Task Bar Panel */
@@ -261,18 +264,21 @@ button {
   transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
-/* Clean Solid Primary CTA Button (No Glow) */
+/* Clean Solid Primary CTA Button with Electric Lime */
 .btn-primary {
-  background-color: var(--accent-blue);
-  color: #FFFFFF;
-  font-weight: 600;
+  background-color: var(--accent-primary);
+  color: #0F0F0F;
+  font-weight: 700;
   padding: 0.65rem 1.3rem;
   border-radius: var(--radius-md);
-  border: none;
+  border: 1px solid var(--accent-primary);
+  transition: background-color 0.15s ease, transform 0.1s ease;
 }
 
 .btn-primary:hover {
-  background-color: #1E40AF;
+  background-color: #CCF020;
+  border-color: #CCF020;
+  color: #0F0F0F;
 }
 
 .btn-secondary {

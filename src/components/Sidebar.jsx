@@ -79,7 +79,7 @@ export const Sidebar = ({ onQuickNew }) => {
       <div className="rail-sidebar">
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.25rem' }}>
           <div style={{ marginBottom: '0.25rem' }}>
-            <FlovAppIcon size={40} bg="#FFFFFF" iconColor="#1D4ED8" />
+            <FlovAppIcon size={40} bg="#DFFF3A" iconColor="#0F0F0F" />
           </div>
 
           {/* Option in Blue Task Bar to Toggle/Access White Task Bar */}

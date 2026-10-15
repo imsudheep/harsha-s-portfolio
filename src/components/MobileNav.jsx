@@ -49,7 +49,7 @@ export const MobileNav = ({ onQuickNew }) => {
           onClick={() => setActiveView('HOME')}
           style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', cursor: 'pointer' }}
         >
-          <FlovAppIcon size={30} bg="var(--accent-blue)" iconColor="#FFFFFF" />
+          <FlovAppIcon size={32} bg="#DFFF3A" iconColor="#0F0F0F" />
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <FlovWordmark height={18} color="var(--text-primary)" />
             <div style={{ fontSize: '0.55rem', color: 'var(--text-muted)', fontWeight: '600', letterSpacing: '0.05em', marginTop: '0.15rem' }}>DIGITAL OFFICE</div>
